@@ -1,5 +1,6 @@
 package com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.Generators.HV;
 
+import static com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.MultiBlockClasses.GTN_HatchElement.DynamoMulti;
 import static com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.MultiBlockClasses.GTN_HatchElement.SensorHatch;
 import static gregtech.api.enums.HatchElement.Dynamo;
 import static gregtech.api.enums.HatchElement.InputBus;
@@ -157,7 +158,7 @@ public class GTN_VacuumNuke extends GTN_MultiBlockBase<GTN_VacuumNuke> {
                             GTN_Casings.FrostProofMachineCasing,
                             GTN_Casings.StableTitaniumMachineCasing,
                             GTN_Casings.RobustTungstenSteelMachineCasing)
-                        .hatches(InputBus, Dynamo, InputHatch, OutputHatch, Maintenance, SensorHatch)
+                        .hatches(InputBus, Dynamo, InputHatch, OutputHatch, Maintenance, SensorHatch, DynamoMulti)
                         .build()));
     }
 
@@ -292,7 +293,7 @@ public class GTN_VacuumNuke extends GTN_MultiBlockBase<GTN_VacuumNuke> {
 
             setEnergyGenerate(checkEnergy(eu, heat));
 
-            for (GTN_SensorHatch hatch : mSensorHatch) {
+            for (GTN_SensorHatch hatch : mSensorHatches) {
                 hatch.updateRedstoneOutput(heat);
             }
         }

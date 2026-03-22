@@ -13,6 +13,7 @@ import gregtech.api.util.IGTHatchAdder;
 import gtPlusPlus.xmod.gregtech.api.metatileentity.implementations.MTEHatchSteamBusInput;
 import gtPlusPlus.xmod.gregtech.api.metatileentity.implementations.MTEHatchSteamBusOutput;
 import gtPlusPlus.xmod.gregtech.api.metatileentity.implementations.base.MTEHatchCustomFluidBase;
+import tectech.thing.metaTileEntity.hatch.MTEHatchDynamoMulti;
 
 @SuppressWarnings("unchecked")
 public enum GTN_HatchElement implements IHatchElement<GTN_MultiBlockBase<?>> {
@@ -46,7 +47,15 @@ public enum GTN_HatchElement implements IHatchElement<GTN_MultiBlockBase<?>> {
 
         @Override
         public long count(GTN_MultiBlockBase<?> gtnMultiBlockBase) {
-            return gtnMultiBlockBase.mSensorHatch.size();
+            return gtnMultiBlockBase.mSensorHatches.size();
+        }
+    },
+
+    DynamoMulti("DynamoMulti", GTN_MultiBlockBase::addDynamoMultiHatchToMachineList, MTEHatchDynamoMulti .class) {
+
+        @Override
+        public long count(GTN_MultiBlockBase<?> gtnMultiBlockBase) {
+            return gtnMultiBlockBase.mDynamoHatches.size();
         }
     };
 
