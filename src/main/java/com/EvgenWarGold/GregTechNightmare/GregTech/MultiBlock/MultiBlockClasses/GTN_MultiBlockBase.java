@@ -873,6 +873,7 @@ public abstract class GTN_MultiBlockBase<T extends GTN_MultiBlockBase<T>> extend
         for (MTEHatch h : mMufflerHatches) h.updateTexture(textureId);
         for (MTEHatch h : mExoticEnergyHatches) h.updateTexture(textureId);
         for (MTEHatch h : mSensorHatch) h.updateTexture(textureId);
+        for (MTEHatch h : mDynamoHatches) h.updateTexture(textureId);
     }
 
     public CoordMultiBlock getCoord() {
