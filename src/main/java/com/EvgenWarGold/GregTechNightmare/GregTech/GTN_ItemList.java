@@ -54,6 +54,12 @@ public enum GTN_ItemList {
 
     // region Hatch
     SensorHatch,
+    DataInput,
+    DataOutput,
+    // endregion
+
+    // region MTE
+    DataPipe,
     // endregion
 
     ;

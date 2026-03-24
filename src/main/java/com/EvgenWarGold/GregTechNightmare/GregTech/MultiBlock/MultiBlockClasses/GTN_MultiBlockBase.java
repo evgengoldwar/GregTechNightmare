@@ -16,6 +16,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
+import com.EvgenWarGold.GregTechNightmare.GregTech.Hatch.GTN_DataInput;
+import com.EvgenWarGold.GregTechNightmare.GregTech.Hatch.GTN_DataOutput;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -84,6 +86,8 @@ public abstract class GTN_MultiBlockBase<T extends GTN_MultiBlockBase<T>> extend
     public ArrayList<MTEHatchCustomFluidBase> mSteamInputFluids = new ArrayList<>();
     public ArrayList<GTN_SensorHatch> mSensorHatch = new ArrayList<>();
     public ArrayList<MTEHatchDynamoMulti> mDynamoMultiHatches = new ArrayList<>();
+    public ArrayList<GTN_DataInput> mDataInputHatches = new ArrayList<>();
+    public ArrayList<GTN_DataOutput> mDataOutputHatches = new ArrayList<>();
     // Processing
     private int maxParallel = 1;
     private float euModifier = 1;
@@ -127,6 +131,8 @@ public abstract class GTN_MultiBlockBase<T extends GTN_MultiBlockBase<T>> extend
         this.mSteamOutputBusses.clear();
         this.mSensorHatch.clear();
         this.mDynamoMultiHatches.clear();
+        this.mDataInputHatches.clear();
+        this.mDataOutputHatches.clear();
         mainCasingCount = 0;
 
         for (TierData tierData : registeredTierData) {
@@ -561,6 +567,22 @@ public abstract class GTN_MultiBlockBase<T extends GTN_MultiBlockBase<T>> extend
 
         return mDynamoMultiHatches.add(dynamoMulti);
     }
+
+    public final boolean addDataInputHatchToMachineList(IGregTechTileEntity tileEntity) {
+        if (baseCheckHatch(tileEntity)) return false;
+
+        if (!(tileEntity.getMetaTileEntity() instanceof GTN_DataInput dataInput)) return false;
+
+        return mDataInputHatches.add(dataInput);
+    }
+
+    public final boolean addDataOutputHatchToMachineList(IGregTechTileEntity tileEntity) {
+        if (baseCheckHatch(tileEntity)) return false;
+
+        if (!(tileEntity.getMetaTileEntity() instanceof GTN_DataOutput dataOutput)) return false;
+
+        return mDataOutputHatches.add(dataOutput);
+    }
     // endregion
 
     // region Energy
@@ -950,6 +972,8 @@ public abstract class GTN_MultiBlockBase<T extends GTN_MultiBlockBase<T>> extend
         for (MTEHatch h : mSensorHatch) h.updateTexture(textureId);
         for (MTEHatch h : mDynamoHatches) h.updateTexture(textureId);
         for (MTEHatch h : mDynamoMultiHatches) h.updateTexture(textureId);
+        for (MTEHatch h : mDataInputHatches) h.updateTexture(textureId);
+        for (MTEHatch h : mDataOutputHatches) h.updateTexture(textureId);
     }
 
     public CoordMultiBlock getCoord() {

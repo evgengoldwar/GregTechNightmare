@@ -1,6 +1,9 @@
 package com.EvgenWarGold.GregTechNightmare.GregTech;
 
+import com.EvgenWarGold.GregTechNightmare.GregTech.Hatch.GTN_DataInput;
+import com.EvgenWarGold.GregTechNightmare.GregTech.Hatch.GTN_DataOutput;
 import com.EvgenWarGold.GregTechNightmare.GregTech.Hatch.GTN_SensorHatch;
+import com.EvgenWarGold.GregTechNightmare.GregTech.Mte.GTN_DataPipe;
 import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.Example.GTN_TestMultiBlock;
 import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.Generators.HV.GTN_VacuumNuke;
 import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.Generators.LV.GTN_CreosoteEngine;
@@ -49,6 +52,9 @@ public final class MachineLoader {
         GTN_ItemList.BloodEnchanter.set(new GTN_BloodEnchanter(21_019, "BloodEnchanter"));
         GTN_ItemList.VacuumNuke.set(new GTN_VacuumNuke(21_020, "VacuumNuke"));
         GTN_ItemList.SensorHatch.set(new GTN_SensorHatch(21_021, "Sensor Hatch"));
+        GTN_ItemList.DataInput.set(new GTN_DataInput(21_022, "Data Input"));
+        GTN_ItemList.DataOutput.set(new GTN_DataOutput(21_023, "Data Output"));
+        GTN_ItemList.DataPipe.set(new GTN_DataPipe(21_024, "Data Pipe"));
         //spotless:on
     }
 }

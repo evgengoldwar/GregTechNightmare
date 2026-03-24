@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import com.EvgenWarGold.GregTechNightmare.GregTech.Hatch.GTN_DataInput;
+import com.EvgenWarGold.GregTechNightmare.GregTech.Hatch.GTN_DataOutput;
 import com.EvgenWarGold.GregTechNightmare.GregTech.Hatch.GTN_SensorHatch;
 
 import gregtech.api.interfaces.IHatchElement;
@@ -36,7 +38,8 @@ public enum GTN_HatchElement implements IHatchElement<GTN_MultiBlockBase<?>> {
         }
     },
 
-    SteamOutputBus("SteamOutputBus", (base, tile, casing) -> base.addSteamOutputBusToMachineList(tile), MTEHatchSteamBusOutput.class) {
+    SteamOutputBus("SteamOutputBus", (base, tile, casing) -> base.addSteamOutputBusToMachineList(tile),
+        MTEHatchSteamBusOutput.class) {
 
         @Override
         public long count(GTN_MultiBlockBase<?> gtnMultiBlockBase) {
@@ -52,7 +55,22 @@ public enum GTN_HatchElement implements IHatchElement<GTN_MultiBlockBase<?>> {
         }
     },
 
-    DynamoMulti("DynamoMulti", (base, tile, casing) -> base.addDynamoMultiHatchToMachineList(tile), MTEHatchDynamoMulti.class) {
+    DataInput("DataInput", (base, tile, casing) -> base.addDataInputHatchToMachineList(tile), GTN_DataInput.class) {
+        @Override
+        public long count(GTN_MultiBlockBase<?> gtnMultiBlockBase) {
+            return gtnMultiBlockBase.mDataInputHatches.size();
+        }
+    },
+
+    DataOutput("DataOutput", (base, tile, casing) -> base.addDataOutputHatchToMachineList(tile), GTN_DataOutput.class) {
+        @Override
+        public long count(GTN_MultiBlockBase<?> gtnMultiBlockBase) {
+            return gtnMultiBlockBase.mDataOutputHatches.size();
+        }
+    },
+
+    DynamoMulti("DynamoMulti", (base, tile, casing) -> base.addDynamoMultiHatchToMachineList(tile),
+        MTEHatchDynamoMulti.class) {
 
         @Override
         public long count(GTN_MultiBlockBase<?> gtnMultiBlockBase) {

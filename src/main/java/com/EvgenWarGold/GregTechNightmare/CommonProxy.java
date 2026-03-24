@@ -1,5 +1,6 @@
 package com.EvgenWarGold.GregTechNightmare;
 
+import com.EvgenWarGold.GregTechNightmare.GregTech.Api.Pipe.NetworkDispatcherPipe;
 import com.EvgenWarGold.GregTechNightmare.GregTech.Blocks.GTN_BlocksRegister;
 import com.EvgenWarGold.GregTechNightmare.GregTech.Items.GTN_ItemsRegister;
 import com.EvgenWarGold.GregTechNightmare.GregTech.MachineLoader;
@@ -28,6 +29,7 @@ public class CommonProxy {
     public void init(FMLInitializationEvent event) {
         MachineLoader.init();
         RecipeResultRegisters.init();
+        NetworkDispatcherPipe.registerPackets();
     }
 
     // postInit "Handle interaction with other mods, complete your setup based on this." (Remove if not needed)
