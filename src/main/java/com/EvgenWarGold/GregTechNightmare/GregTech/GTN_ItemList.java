@@ -20,6 +20,18 @@ public enum GTN_ItemList {
     AdvancedClay,
     MeteorMinerSchematic1,
     MeteorMinerSchematic2,
+    VortexToken,
+    RaitToken,
+    FaotikToken,
+    CrazerToken,
+    DomToken,
+    SoulToken,
+    Ya9yuToken,
+    VoiderToken,
+    OmnymToken,
+    CinobiToken,
+    Quetz4lToken,
+    PotatoToken,
     // endregion
 
     // region Casings

@@ -4,6 +4,18 @@ item.GTN_MetaItem01.0.name=§cTest Item
 item.GTN_MetaItem01.1.name=Advanced Clay
 item.GTN_MetaItem01.2.name=Meteor Miner Schematic Tier I
 item.GTN_MetaItem01.3.name=Meteor Miner Schematic Tier II
+item.GTN_MetaItem01.4.name=Vortex Token
+item.GTN_MetaItem01.5.name=Rait Token
+item.GTN_MetaItem01.6.name=Faotik Token
+item.GTN_MetaItem01.7.name=Crazer Token
+item.GTN_MetaItem01.8.name=Dom Token
+item.GTN_MetaItem01.9.name=Soul Token
+item.GTN_MetaItem01.10.name=Ya9yu Token
+item.GTN_MetaItem01.11.name=Voider Token
+item.GTN_MetaItem01.12.name=Omnym Token
+item.GTN_MetaItem01.13.name=Cinobi Token
+item.GTN_MetaItem01.14.name=Quetz4l Token
+item.GTN_MetaItem01.15.name=Potato Token
 
 #Blocks
 tile.GTN_MetaBlockCasing01.0.name=§cTest Casing
