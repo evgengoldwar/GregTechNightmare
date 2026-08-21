@@ -15,6 +15,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.EvgenWarGold.GregTechNightmare.GregTech.Textures.GTN_BlockIcons;
 import com.EvgenWarGold.GregTechNightmare.Utils.Constants;
+import com.EvgenWarGold.GregTechNightmare.Utils.GTN_Utils;
 
 import gregtech.api.enums.Textures;
 import gregtech.api.interfaces.IIconContainer;
@@ -30,6 +31,7 @@ import vazkii.botania.api.wand.IWandHUD;
 import vazkii.botania.client.core.handler.HUDHandler;
 import vazkii.botania.common.block.ModBlocks;
 
+@IMetaTileEntity.SkipGenerateDescription
 public class GTN_ManaHatch extends MTEHatch implements IManaPool, IWandHUD {
 
     private final static int MAX_MANA = 1_000_000;
@@ -93,9 +95,10 @@ public class GTN_ManaHatch extends MTEHatch implements IManaPool, IWandHUD {
 
     @Override
     public String[] getDescription() {
-        return new String[] { "Stores Mana from Botania", "§7Capacity:§c 1§7 Mana Pool",
-            "§7Accepts Mana From: §aMana Spreaders§7", "§7Use §aWand of the Forest§7 to show mana",
-            "Added by: " + Constants.MOD_NAME };
+        return new String[] { GTN_Utils.tr("GTN.Hatch.ManaHatch.tooltip.00"),
+            GTN_Utils.tr("GTN.Hatch.ManaHatch.tooltip.01"), GTN_Utils.tr("GTN.Hatch.ManaHatch.tooltip.02"),
+            GTN_Utils.tr("GTN.Hatch.ManaHatch.tooltip.03"),
+            GTN_Utils.tr("GTN.Hatch.common.addedBy", Constants.MOD_NAME) };
     }
 
     @Override

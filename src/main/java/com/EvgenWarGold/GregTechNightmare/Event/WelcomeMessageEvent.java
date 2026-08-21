@@ -3,6 +3,7 @@ package com.EvgenWarGold.GregTechNightmare.Event;
 import net.minecraft.event.ClickEvent;
 import net.minecraft.event.HoverEvent;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.ChatStyle;
 import net.minecraft.util.EnumChatFormatting;
 
@@ -13,41 +14,54 @@ import cpw.mods.fml.common.gameevent.PlayerEvent;
 
 public class WelcomeMessageEvent {
 
+    private static final String SEPARATOR = "=================================================";
+
     @SubscribeEvent
     public void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event) {
         String playerName = event.player.getDisplayName();
 
-        String[] lines = { EnumChatFormatting.GRAY + "=================================================",
-            EnumChatFormatting.DARK_RED + "      GregTechNightmare " + "by " + Authors.EVGEN_WAR_GOLD.name,
-            EnumChatFormatting.GRAY + "=================================================",
-            EnumChatFormatting.YELLOW + "  Adds new multiblocks and tweaks to GTNH.",
-            EnumChatFormatting.YELLOW + "  Makes some things easier, some things harder.",
-            EnumChatFormatting.YELLOW + "  All for more fun and chaos!",
-            EnumChatFormatting.GRAY + "=================================================",
-            EnumChatFormatting.GREEN + "  Enjoy the nightmare, " + playerName + " Play with style!",
-            EnumChatFormatting.GRAY + "=================================================" };
+        sendSeparator(event);
+        event.player.addChatMessage(
+            translatedLine("      ", EnumChatFormatting.DARK_RED, "GTN.Welcome.header", Authors.EVGEN_WAR_GOLD.name));
+        sendSeparator(event);
+        event.player.addChatMessage(translatedLine("  ", EnumChatFormatting.YELLOW, "GTN.Welcome.description.0"));
+        event.player.addChatMessage(translatedLine("  ", EnumChatFormatting.YELLOW, "GTN.Welcome.description.1"));
+        event.player.addChatMessage(translatedLine("  ", EnumChatFormatting.YELLOW, "GTN.Welcome.description.2"));
+        sendSeparator(event);
+        event.player.addChatMessage(translatedLine("  ", EnumChatFormatting.GREEN, "GTN.Welcome.greeting", playerName));
+        sendSeparator(event);
 
-        for (String line : lines) {
-            event.player.addChatMessage(new ChatComponentText(line));
-        }
+        ChatComponentText githubMessage = translatedLine("  ", EnumChatFormatting.WHITE, "GTN.Welcome.github.label");
+        ChatComponentTranslation githubLink = new ChatComponentTranslation("GTN.Welcome.github.open");
+        ChatComponentTranslation githubHover = new ChatComponentTranslation("GTN.Welcome.github.hover");
 
-        ChatComponentText githubLabel = new ChatComponentText(EnumChatFormatting.WHITE + "  GitHub: ");
-        ChatComponentText githubLink = new ChatComponentText(EnumChatFormatting.RED + "Click to open");
+        githubHover.setChatStyle(new ChatStyle().setColor(EnumChatFormatting.YELLOW));
         githubLink.setChatStyle(
-            new ChatStyle().setChatClickEvent(
-                new ClickEvent(ClickEvent.Action.OPEN_URL, "https://github.com/evgengoldwar/GregTechNightmare")));
+            new ChatStyle().setColor(EnumChatFormatting.RED)
+                .setChatClickEvent(
+                    new ClickEvent(ClickEvent.Action.OPEN_URL, "https://github.com/evgengoldwar/GregTechNightmare"))
+                .setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, githubHover)));
 
-        githubLink.getChatStyle()
-            .setChatHoverEvent(
-                new HoverEvent(
-                    HoverEvent.Action.SHOW_TEXT,
-                    new ChatComponentText(EnumChatFormatting.YELLOW + "Click to open GitHub repository")));
-
-        ChatComponentText githubMessage = new ChatComponentText("");
-        githubMessage.appendSibling(githubLabel);
+        githubMessage.appendText(" ");
         githubMessage.appendSibling(githubLink);
         event.player.addChatMessage(githubMessage);
-        event.player.addChatMessage(
-            new ChatComponentText(EnumChatFormatting.GRAY + "================================================="));
+        sendSeparator(event);
+    }
+
+    private static ChatComponentText translatedLine(String prefix, EnumChatFormatting color, String translationKey,
+        Object... args) {
+        ChatComponentText line = new ChatComponentText(prefix);
+        line.setChatStyle(new ChatStyle().setColor(color));
+
+        ChatComponentTranslation translated = new ChatComponentTranslation(translationKey, args);
+        translated.setChatStyle(new ChatStyle().setColor(color));
+        line.appendSibling(translated);
+        return line;
+    }
+
+    private static void sendSeparator(PlayerEvent.PlayerLoggedInEvent event) {
+        ChatComponentText separator = new ChatComponentText(SEPARATOR);
+        separator.setChatStyle(new ChatStyle().setColor(EnumChatFormatting.GRAY));
+        event.player.addChatMessage(separator);
     }
 }

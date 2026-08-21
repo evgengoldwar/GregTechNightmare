@@ -83,8 +83,16 @@ public class GTN_MultiBlockTooltipBuilder extends MultiblockTooltipBuilder {
     }
 
     public GTN_MultiBlockTooltipBuilder addAuthor(Authors author) {
-        addInfo("Author: " + author.name);
+        addInfo(getLocalizedAuthor(author));
         return this;
+    }
+
+    private static String getLocalizedAuthor(Authors author) {
+        return switch (author) {
+            case EVGEN_WAR_GOLD -> tr("Author_EvgenWarGold");
+            case CRAZER -> tr("Author_Crazer");
+            case TOTTO -> tr("Author_Totto");
+        };
     }
 
     public GTN_MultiBlockTooltipBuilder addExtraInfo(String extraInfo) {
@@ -101,22 +109,16 @@ public class GTN_MultiBlockTooltipBuilder extends MultiblockTooltipBuilder {
         return this;
     }
 
-    private GTN_MultiBlockTooltipBuilder addHatch(String key, int count, int dot) {
+    private GTN_MultiBlockTooltipBuilder addHatch(String hatchName, int count, int dot) {
         MultiblockTooltipBuilderAccessor accessor = (MultiblockTooltipBuilderAccessor) this;
         List<String> sLines = accessor.getSLines();
+        String formattedCount = EnumChatFormatting.RED + String.valueOf(count) + EnumChatFormatting.YELLOW;
+        String formattedDot = EnumChatFormatting.RED + String.valueOf(dot) + EnumChatFormatting.YELLOW;
         sLines.add(
             EnumChatFormatting.AQUA + TAB
-                + key
+                + hatchName
                 + EnumChatFormatting.YELLOW
-                + " - at least "
-                + EnumChatFormatting.RED
-                + count
-                + EnumChatFormatting.YELLOW
-                + " in any hint dot "
-                + EnumChatFormatting.RED
-                + dot
-                + EnumChatFormatting.YELLOW
-                + " block");
+                + tr("GTN.TooltipBuilder.HatchRequirement", formattedCount, formattedDot));
         return this;
     }
 

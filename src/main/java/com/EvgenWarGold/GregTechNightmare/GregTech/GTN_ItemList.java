@@ -12,9 +12,9 @@ import gregtech.api.util.GTLog;
 import gregtech.api.util.GTUtility;
 
 public enum GTN_ItemList {
+
     // spotless:off
     // region Things
-
     // region Items
     TestItem,
     AdvancedClay,
@@ -38,14 +38,12 @@ public enum GTN_ItemList {
     WildcardNugget,
     WildcardDensePlate,
     // endregion
-
     // region Casings
     TestCasing,
     CokeOvenCasing,
     ArborealCasing,
     SoulCasing,
     // endregion
-
     // region MultiBlock
     TestMultiBlock,
     AdvancedBBF,
@@ -81,8 +79,8 @@ public enum GTN_ItemList {
     AirModuleMagicGenerator,
     OrderModuleMagicGenerator,
     ItemCrate,
+    LargeBioLab,
     // endregion
-
     // region Hatch
     SensorHatch,
     ManaHatch,
@@ -118,8 +116,8 @@ public enum GTN_ItemList {
         if (this.itemStack == itemStack) return true;
         return this.itemStack.isItemEqual(itemStack);
     }
-    // endregion
 
+    // endregion
     // region Getters
     public Item getItem() {
         check();
@@ -145,8 +143,8 @@ public enum GTN_ItemList {
         }
         return GTUtility.copyAmountUnsafe(amount, itemStack);
     }
-    // endregion
 
+    // endregion
     // region Setters
     public GTN_ItemList set(Item item) {
         hasNotBeenSet = false;

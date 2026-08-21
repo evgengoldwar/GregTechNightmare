@@ -20,6 +20,7 @@ import static gregtech.api.enums.TierEU.RECIPE_LV;
 import static gregtech.api.enums.TierEU.RECIPE_LuV;
 import static gregtech.api.enums.TierEU.RECIPE_MV;
 import static gregtech.api.enums.TierEU.RECIPE_UHV;
+import static gregtech.api.enums.TierEU.RECIPE_UV;
 import static gregtech.api.util.GTModHandler.addCraftingRecipe;
 import static gregtech.api.util.GTRecipeBuilder.MINUTES;
 import static gregtech.api.util.GTRecipeConstants.RESEARCH_ITEM;
@@ -438,6 +439,24 @@ public class GTN_MultiBlockRecipesPool {
                 'D', getCircuit(Materials.MV),
                 'G', getGearGt(Materials.Void)
             });
+
+        // Large BioLab
+        GTValues.RA.stdBuilder()
+            .itemInputs(
+                GTN_Casings.ChemicallyInertMachineCasing.getItemStack(16),
+                GTN_Casings.CleanStainlessSteelMachineCasing.getItemStack(16),
+                GTN_Casings.FilterMachineCasing.getItemStack(16),
+                GTN_Casings.UVMachineCasing.getItemStack(8),
+                ItemList.Electric_Pump_UV.get(8),
+                ItemList.Field_Generator_UV.get(2),
+                ItemList.Circuit_Chip_Stemcell.get(16),
+                ItemList.Circuit_Chip_Biocell.get(8),
+                ItemList.Circuit_Chip_BioCPU.get(4))
+            .fluidInputs(Materials.SolderingAlloy.getMolten(2_304))
+            .itemOutputs(GTN_ItemList.LargeBioLab.get(1))
+            .eut(RECIPE_UV)
+            .duration(60 * 20)
+            .addTo(RecipeMaps.assemblerRecipes);
         //spotless:on
     }
 }

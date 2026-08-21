@@ -2,8 +2,6 @@ package com.EvgenWarGold.GregTechNightmare.GregTech.Items;
 
 import java.util.List;
 
-import com.EvgenWarGold.GregTechNightmare.GregTech.Wildcard.WildcardPrefix;
-import com.EvgenWarGold.GregTechNightmare.GregTech.Wildcard.WildcardPrefixItemRenderer;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -13,6 +11,8 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 
+import com.EvgenWarGold.GregTechNightmare.GregTech.Wildcard.WildcardPrefix;
+import com.EvgenWarGold.GregTechNightmare.GregTech.Wildcard.WildcardPrefixItemRenderer;
 import com.EvgenWarGold.GregTechNightmare.GregTechNightmare;
 
 import cpw.mods.fml.relauncher.Side;

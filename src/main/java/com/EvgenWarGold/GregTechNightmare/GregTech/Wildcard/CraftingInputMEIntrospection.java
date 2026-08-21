@@ -36,7 +36,7 @@ public final class CraftingInputMEIntrospection {
         for (Field field : getMapFields(hostType)) {
             try {
                 Object value = field.get(host);
-                if (!(value instanceof Map<?, ?> map)) {
+                if (!(value instanceof Map<?, ?>map)) {
                     continue;
                 }
 
@@ -55,7 +55,7 @@ public final class CraftingInputMEIntrospection {
     private static PatternSlotLookup readPatternSlotMap(Object host, ICraftingPatternDetails source, Field field) {
         try {
             Object value = field.get(host);
-            if (!(value instanceof Map<?, ?> map)) {
+            if (!(value instanceof Map<?, ?>map)) {
                 return new PatternSlotLookup(null);
             }
 

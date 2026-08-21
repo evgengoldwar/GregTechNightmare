@@ -32,7 +32,7 @@ public final class AEPatternStackAccess {
         if (method != null) {
             try {
                 Object value = method.invoke(details);
-                if (value instanceof IAEStack<?>[] aeStack) {
+                if (value instanceof IAEStack<?>[]aeStack) {
                     return copy(aeStack);
                 }
             } catch (ReflectiveOperationException | RuntimeException ignored) {}

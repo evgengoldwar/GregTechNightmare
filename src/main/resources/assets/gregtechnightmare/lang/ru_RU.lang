@@ -1,0 +1,619 @@
+#Items
+item.StructuresLinkTool.name=Инструмент связи структур
+item.ManaProspector.name=Мана геологический сканнер
+item.GTN_MetaItem01.0.name=§cТестовый предмет
+item.GTN_MetaItem01.1.name=Улучшенная глина
+item.GTN_MetaItem01.2.name=Схема метеоритного бурильщика I уровня
+item.GTN_MetaItem01.3.name=Схема метеоритного бурильщика II уровня
+
+#Blocks
+tile.GTN_MetaBlockCasing01.0.name=§cТестовый корпус
+tile.GTN_MetaBlockCasing01.1.name=Корпус коксовой печи
+tile.GTN_MetaBlockCasing01.2.name=Древесный корпус
+tile.GTN_MetaBlockCasing01.3.name=Корпус души
+
+#MultiBlock Waila Info
+multiblock.waila.max_parallel=§aМакс. параллелей: §6%s
+multiblock.waila.eu_modifier=§aПотребление EU: §6%s%%
+multiblock.waila.speed_bonus=§aСкорость: §6%s%%
+multiblock.waila.overclock=§aРазгон: §f(§6%s §f/ §6%s§f)
+multiblock.waila.tier=§aТир: §6%s
+
+#Recipe Maps
+gtn.recipe.AdvancedBBFRecipes=Улучшенная кирпичная доменная печь
+gtn.recipe.AdvancedCokeOvenRecipes=Коксовая печь
+gtn.recipe.LargeArcaneAssemblerRecipes=Большой магический сборщик
+gtn.recipe.GasCollectorRecipes=Сборщик газов
+gtn.recipe.VacuumNukeRecipes=Вакуумная ядерная установка
+gtn.recipe.ImprovedAlgaeFarmRecipes=Улучшенная ферма водорослей
+gtn.recipe.ImprovedSliceNSpliceRecipes= Улучшенный отрубатель и сращеватель
+gtn.recipe.LargeBioLabRecipes=Большая биолаборатория
+
+#RecipeUtils
+gtn.recipe.utils.all_logs=Любые брёвна
+gtn.recipe.utils.multiblock_tier.1=Корпус: морозостойкий
+gtn.recipe.utils.multiblock_tier.2=Корпус: стабильный титановый
+gtn.recipe.utils.multiblock_tier.3=Корпус: усиленный вольфрамстальной
+gtn.recipe.utils.generating_eu=Генерация: %s EU/т
+gtn.recipe.utils.temperature_increase=Повышение температуры: %s
+
+#SimpleCheckRecipeResult
+GT5U.gui.text.node_enough=Узел пуст
+GT5U.gui.text.sapling_enough=Саженцы закончились
+GT5U.gui.text.research_not_completed=§cНедостаточно исследований
+GT5U.gui.text.not_enough_aspects=§cНедостаточно аспектов
+GT5U.gui.text.meteor_mining=§dСейчас идёт добыча!
+GT5U.gui.text.meteor_waiting=§dОжидание метеорита...
+GT5U.gui.text.meteor_reset=§dСброс завершён! 
+GT5U.gui.text.missing_schematic=§dОтсутствует схема.
+GT5U.gui.text.not_enough_blood=§cНедостаточно крови.
+GT5U.gui.text.no_mode_selected=Режим не выбран
+GT5U.gui.text.not_enough_lp=§cНедостаточно LP
+GT5U.gui.text.not_enough_xp=§cНедостаточно жидкого опыта 
+GT5U.gui.text.not_enough_praecantatio=§cНедостаточно Praecantatio
+GT5U.gui.text.invalid_casing=§cНеверный корпус
+GT5U.gui.text.not_enough_water=Недостаточно §bводы
+
+#TestMultiBlock
+multiblock.Test=§cТестовый мультиблок
+multiblock.Test.machine_type=Тест
+multiblock.Test.tooltip.00=Тест 0
+multiblock.Test.tooltip.01=Тест 1
+multiblock.Test.tooltip.02=Тест 2
+multiblock.Test.tooltip.03=Тест 3
+multiblock.Test.tooltip.04=Тест 4
+
+#AdvancedBBF
+multiblock.AdvancedBBF=Улучшенная кирпичная доменная печь
+multiblock.AdvancedBBF.machine_type=Кирпичная доменная печь
+multiblock.AdvancedBBF.tooltip.00=Улучшенная версия §aкирпичной доменной печи
+multiblock.AdvancedBBF.tooltip.01=§eСмотрите рецепты в NEI
+
+#BronzeVoidMiner
+multiblock.BronzeVoidMiner=Бронзовый пустотный шахтёр
+multiblock.BronzeVoidMiner.machine_type=Пустотный шахтёр
+multiblock.BronzeVoidMiner.tooltip.00=Расход пара: §e8 000 л/с
+multiblock.BronzeVoidMiner.tooltip.01=Генерирует §94§7 случайные руды
+multiblock.BronzeVoidMiner.tooltip.02=§cРаботает только в обычном мире
+
+#LowPowerVoidMiner
+multiblock.LowPowerVoidMiner=Маломощный пустотный шахтёр
+multiblock.LowPowerVoidMiner.machine_type=Пустотный шахтёр
+multiblock.LowPowerVoidMiner.tooltip.00=Потребление: §e128 EU/т
+multiblock.LowPowerVoidMiner.tooltip.01=Генерирует §98§7 случайных руд в секунду
+multiblock.LowPowerVoidMiner.tooltip.02=§cРаботает только в обычном мире, Сумеречном лесу и Незере
+
+#MediumPowerBender
+multiblock.MediumPowerBender=Гибочный станок средней мощности
+multiblock.MediumPowerBender.machine_type=Гибочный станок
+multiblock.MediumPowerBender.tooltip.00=Можно использовать только энергетический люк §aMV§7-§aHV§7
+
+#MediumPowerExtruder
+multiblock.MediumPowerExtruder=Экструдер средней мощности
+multiblock.MediumPowerExtruder.machine_type=Экструдер
+multiblock.MediumPowerExtruder.tooltip.00=Можно использовать только энергетический люк §aMV§7-§aHV§7
+
+#MediumPowerAssembler
+multiblock.MediumPowerAssembler=Сборщик средней мощности
+multiblock.MediumPowerAssembler.machine_type=Сборщик
+multiblock.MediumPowerAssembler.tooltip.00=Можно использовать только энергетический люк §aMV§7-§aHV§7
+
+#MediumPowerCircuitAssembler
+multiblock.MediumPowerCircuitAssembler=Сборщик схем средней мощности
+multiblock.MediumPowerCircuitAssembler.machine_type=Сборщик схем
+multiblock.MediumPowerCircuitAssembler.tooltip.00=Можно использовать только энергетический люк §aMV§7-§aHV§7
+
+#CokeOven
+multiblock.AdvancedCokeOven=Улучшенная коксовая печь
+multiblock.AdvancedCokeOven.machine_type=Коксовая печь
+multiblock.AdvancedCokeOven.tooltip.00=Улучшенная коксовая печь
+
+#NodeEnergizer
+multiblock.NodeEnergizer=Наращиватель узла
+multiblock.NodeEnergizer.machine_type=Магический взломщик
+multiblock.NodeEnergizer.tooltip.00=Эта машина пытается добавлять аспекты из предметов во входной шине, но какой ценой?
+multiblock.NodeEnergizer.tooltip.01=2x энергетических люка HV -> открывает шину ULV
+multiblock.NodeEnergizer.tooltip.02=2x энергетических люка EV -> открывает шину LV
+multiblock.NodeEnergizer.tooltip.03=2x энергетических люка IV -> открывает шину MV
+multiblock.NodeEnergizer.tooltip.04=2x энергетических люка LuV -> открывает шину HV
+multiblock.NodeEnergizer.tooltip.05=Шина HV включает модификаторы аспектов (размер стака предметов имеет значение)
+
+#LargeArcaneAssembler
+multiblock.LargeArcaneAssembler=Большой магический сборщик
+multiblock.LargeArcaneAssembler.machine_type=Магический сборщик
+multiblock.LargeArcaneAssembler.tooltip.00=Тир энергетического люка ограничен §fтиром стекла
+multiblock.LargeArcaneAssembler.tooltip.01=Требует §aвозбуждённый узел§7 в структуре
+multiblock.LargeArcaneAssembler.tooltip.02=Для крафта требуется §aисследование§7
+multiblock.LargeArcaneAssembler.tooltip.03=Скорость всегда 1 секунда
+multiblock.LargeArcaneAssembler.tooltip.04=Максимальные параллели определяется наименее доступным требуемым аспектом в §aaвозбуждённом узле.
+
+#TreeSprouter
+multiblock.TreeSprouter=Проращиватель деревьев
+multiblock.TreeSprouter.machine_type=Ферма деревьев
+multiblock.TreeSprouter.tooltip.00=Медленный, но бесплатный лесовозобновляющий двигатель деревьев
+multiblock.TreeSprouter.tooltip.01=Производит: §664x§7 брёвен за §c300 сек
+multiblock.TreeSprouter.tooltip.02=Впрыск пара: §616 000 л§7 сокращает время до §c120 сек
+multiblock.TreeSprouter.tooltip.03=§aНе требует EU
+
+#CreosoteEngine
+multiblock.CreosoteEngine=Креозотовый двигатель
+multiblock.CreosoteEngine.machine_type=Генератор
+multiblock.CreosoteEngine.tooltip.00=В структуре допускается только один тир энерговывода: §cLV §7или §cMV
+multiblock.CreosoteEngine.tooltip.01=Поддерживает буферизированный энерговывод
+multiblock.CreosoteEngine.tooltip.02=Топливо: §eкреозот
+multiblock.CreosoteEngine.tooltip.03=LV: §a25 л/с §7на ампер
+multiblock.CreosoteEngine.tooltip.04=MV: §a100 л/с §7на ампер
+
+#MediumPowerWireMill
+multiblock.MediumPowerWireMill=Проволочный станок средней мощности
+multiblock.MediumPowerWireMill.machine_type=Проволочный стан
+multiblock.MediumPowerWireMill.tooltip.00=Можно использовать только энергетический люк §aMV§7-§aHV§7
+
+#MediumPowerEngraver
+multiblock.MediumPowerEngraver=Лазерный гравировщик средней мощности
+multiblock.MediumPowerEngraver.machine_type=Лазерный гравировщик
+multiblock.MediumPowerEngraver.tooltip.00=Можно использовать только энергетический люк §aMV§7-§aHV§7
+
+#ExtremePowerCircuitAssembler
+multiblock.ExtremePowerCircuitAssembler=Сверхмощный сборщик схем
+multiblock.ExtremePowerCircuitAssembler.machine_type=Сборщик схем
+multiblock.ExtremePowerCircuitAssembler.tooltip.00=Можно использовать только энергетический люк §aEV§7-§aIV§7
+
+#UltimatePrecise
+multiblock.UltimatePrecise=Ультимативно прецизионный сборщик
+multiblock.UltimatePrecise.machine_type=Сборщик
+multiblock.UltimatePrecise.tooltip.00=Максимальный энергетический люк: §1UIV§7
+multiblock.UltimatePrecise.tooltip.01=§aРазрешён скип тиров
+
+#LaserMeteorMiner
+multiblock.LaserMeteorMiner=Лазерный метеоритный шахтер
+multiblock.LaserMeteorMiner.machine_type=Метеоритный шахтер
+multiblock.LaserMeteorMiner.tooltip.00=Схемы открывают тир
+multiblock.LaserMeteorMiner.tooltip.01=Поместите кирку Землекрушитель во входную шину, чтобы увеличить Удачу
+multiblock.LaserMeteorMiner.tooltip.02=Удача I: ранг D
+multiblock.LaserMeteorMiner.tooltip.03=Удача II: ранг C
+multiblock.LaserMeteorMiner.tooltip.04=Удача III: ранг B
+multiblock.LaserMeteorMiner.tooltip.05=Удача IV: ранг A
+multiblock.LaserMeteorMiner.tooltip.06=Удача V: ранг S
+multiblock.LaserMeteorMiner.tooltip.07=Удача VI: ранг SS
+multiblock.LaserMeteorMiner.tooltip.08=§4ТИР I
+multiblock.LaserMeteorMiner.tooltip.09=Потребление: §aLuV§7 1x ампер
+multiblock.LaserMeteorMiner.tooltip.10=Добывает один ряд за цикл (§91§7 тик)
+multiblock.LaserMeteorMiner.tooltip.11=§4ТИР II
+multiblock.LaserMeteorMiner.tooltip.12=Потребление: §aZPM§7 1x ампер
+multiblock.LaserMeteorMiner.tooltip.13=Добывает один слой за цикл (§910§7 тиков)
+multiblock.LaserMeteorMiner.fortune.0=Улучшение: §fне установлено
+multiblock.LaserMeteorMiner.fortune.1=Улучшение: §fУдача I
+multiblock.LaserMeteorMiner.fortune.2=Улучшение: §fУдача II
+multiblock.LaserMeteorMiner.fortune.3=Улучшение: §fУдача III
+multiblock.LaserMeteorMiner.fortune.4=Улучшение: §fУдача IV
+multiblock.LaserMeteorMiner.fortune.5=Улучшение: §fУдача V
+multiblock.LaserMeteorMiner.fortune.6=Улучшение: §fУдача VI
+multiblock.LaserMeteorMiner.tier.0=Текущий тир: §f0
+multiblock.LaserMeteorMiner.tier.1=Текущий тир: §f1
+multiblock.LaserMeteorMiner.tier.2=Текущий тир: §f2
+multiblock.LaserMeteorMiner.button.highlight=Подсветить центральный блок
+
+#GasCollector
+multiblock.GasCollector=Сборщик газов
+multiblock.GasCollector.machine_type=Сборщик газов
+multiblock.GasCollector.tooltip.00=Собирает различные газы из атмосферы
+multiblock.GasCollector.tooltip.01=Тир энергетического люка ограничен §fтиром стекла
+multiblock.GasCollector.tooltip.02=Поместите подходящую планету во входную шину для рецепта
+
+#BloodEnchanter
+multiblock.BloodEnchanter=Кровавый зачарователь
+multiblock.BloodEnchanter.machine_type=Зачарователь
+multiblock.BloodEnchanter.tooltip.00=Автоматическая версия ритуала зачарования из §cBloodMagic§7 и стола сверхзачарования из §5Thaumic Bases
+multiblock.BloodEnchanter.tooltip.01=Имеет 2 режима работы, зависящих от схемы в шине
+multiblock.BloodEnchanter.tooltip.02=Схема 1 включает режим копирования книг зачарования
+multiblock.BloodEnchanter.tooltip.03=Схема 2 включает режим стола сверхзачарования из §5Thaumic Bases
+multiblock.BloodEnchanter.tooltip.04=В режиме 1 книга зачарования не расходуется и зачаровывает любой предмет из входной шины
+multiblock.BloodEnchanter.tooltip.05=В режиме 2 расходуется книга зачарования и 32 аспекта §5Praecantatio§7, чтобы добавить +1 ко всем её зачарованиям
+multiblock.BloodEnchanter.tooltip.06=§5Praecantatio§7 можно подавать через Infusion Provider, установленный на любом корпусе
+multiblock.BloodEnchanter.tooltip.07=Каждая операция во всех режимах требует §a16500 жидкого опыта§7 и §cкровь§7 из сети
+multiblock.BloodEnchanter.tooltip.08=Расход §cкрови§7 зависит от уровня зачарования
+multiblock.BloodEnchanter.tooltip.09=Расходует §cкровь§7 из сети владельца мультиблока
+multiblock.BloodEnchanter.tooltip.10=Используйте портативный сканер на машине, чтобы узнать требуемое количество §cкрови§7
+multiblock.BloodEnchanter.tooltip.11=Не требует энергии!
+multiblock.BloodEnchanter.tooltip.12=§5128000§7 загрязнения в секунду
+
+#VacuumNuke
+multiblock.VacuumNuke=Вакуумная ядерная установка
+multiblock.VacuumNuke.machine_type=Ядерная установка
+multiblock.VacuumNuke.waila.heat=§bНагрев: §6%s%%
+multiblock.VacuumNuke.tooltip.00=Во время работы нагревается каждую секунду; значение показано в NEI
+multiblock.VacuumNuke.tooltip.01=Выработка энергии масштабируется от §60% §7до §670% нагрева §7(§a100%§7). При §699%§7 нагрева мощность §ax3§7
+multiblock.VacuumNuke.tooltip.02=Расходует §9охладитель§7 для снижения температуры:
+multiblock.VacuumNuke.tooltip.03=Охладитель IC2: §c10 000 л§7 на единицу нагрева
+multiblock.VacuumNuke.tooltip.04=Суперохладитель: §c1 000 л§7 на единицу нагрева
+multiblock.VacuumNuke.tooltip.05=Ледяной криотеум: §c1 л§7 на единицу нагрева (не перерабатывается)
+multiblock.VacuumNuke.tooltip.06=Каждый тир катушек даёт §a+10%§7 мощности
+multiblock.VacuumNuke.tooltip.07=Каждый тир корпуса предметной трубы даёт §a+10%§7 к скорости обработки
+multiblock.VacuumNuke.tooltip.08=Рецепты работают только на тире §eосновного корпуса§7
+multiblock.VacuumNuke.tooltip.09=Каждый тир основного корпуса выше порога §aудваивает§7 выработку энергии
+multiblock.VacuumNuke.tooltip.10=Сенсорный люк может отслеживать температуру
+
+#ImprovedAlgaeFarm
+multiblock.ImprovedAlgaeFarm=Улучшенная ферма водорослей 
+multiblock.ImprovedAlgaeFarm.machine_type=Ферма водорослей
+multiblock.ImprovedAlgaeFarm.tooltip.00=Улучшенная версия фермы водорослей
+multiblock.ImprovedAlgaeFarm.tooltip.01=Каждая параллель требует 1000 л §bводы
+multiblock.ImprovedAlgaeFarm.tooltip.02=Поместите подходящую схему во входную шину, чтобы выбрать производимые водоросли
+multiblock.ImprovedAlgaeFarm.tooltip.03=Поместите §aудобрение§7 из IC2, чтобы удвоить выход водорослей
+multiblock.ImprovedAlgaeFarm.tooltip.04=Расход §aудобрения§7 зависит от количества параллелей
+multiblock.ImprovedAlgaeFarm.tooltip.05=Заменяйте корпуса машины, чтобы увеличить количество параллелей
+multiblock.ImprovedAlgaeFarm.tooltip.06=Корпус LV даёт 4 параллели, каждый следующий тир удваивает их количество
+multiblock.ImprovedAlgaeFarm.tooltip.07=После корпуса §dLuV§7 каждый следующий тир увеличивает количество параллелей в 4 раза
+multiblock.ImprovedAlgaeFarm.tooltip.08=Корпус §9UV§7 убирает требование §bводы
+multiblock.ImprovedAlgaeFarm.tooltip.09=Корпус §cUXV§7 имеет 2g параллелей
+multiblock.ImprovedAlgaeFarm.tooltip.10=Поддерживает шлюз водохранилища и люки снабжения
+multiblock.ImprovedAlgaeFarm.tooltip.11=Не требует энергии!
+
+#ImprovedSliceNSplice
+multiblock.ImprovedSliceNSplice=Улучшенный отрубатель и сращиватель
+multiblock.ImprovedSliceNSplice.machine_type=Отрубатель и сращиватель
+multiblock.ImprovedSliceNSplice.tooltip.00=Улучшенная версия отрубателя и сращивателя из Ender IO
+multiblock.ImprovedSliceNSplice.tooltip.01=Потребляет EU вместо RF
+multiblock.ImprovedSliceNSplice.tooltip.02=Не требует топор и ножницы
+multiblock.ImprovedSliceNSplice.tooltip.03=Поместите конденсатор в контроллер, чтобы открыть больше параллелей
+multiblock.ImprovedSliceNSplice.tooltip.04=Каждый конденсатор удваивает количество параллелей
+multiblock.ImprovedSliceNSplice.tooltip.05=Базовые параллели: 2
+multiblock.ImprovedSliceNSplice.tooltip.06=Максимальные параллели: 512
+
+#HighPowerComponentAssembler
+multiblock.HighPowerComponentAssembler=Сборщик компонентов высокого напряжения
+multiblock.HighPowerComponentAssembler.machine_type=Сборщик компонентов
+multiblock.HighPowerComponentAssembler.tooltip.00=Улучшенная версия компонентной сборочной машины
+multiblock.HighPowerComponentAssembler.tooltip.01=Ограничивает доступные машине рецепты. Подробности смотрите на страницах NEI
+multiblock.HighPowerComponentAssembler.tooltip.02=Может обрабатывать рецепты от §cLV §7до §cEV
+
+#ZeroPowerWireMill
+multiblock.ZeroPowerWireMill=Проволочный станок ZPM
+multiblock.ZeroPowerWireMill.machine_type=Проволочный стан
+multiblock.ZeroPowerWireMill.tooltip.00=Можно использовать только энергетический люк §aZPM§7-§aUV§7
+multiblock.ZeroPowerWireMill.tooltip.01=§aРазрешён скип тиров
+
+#MagicEBF
+multiblock.MagicEBF=Магическая ЭДП
+multiblock.MagicEBF.machine_type=Доменная печь
+multiblock.MagicEBF.tooltip.00=Улучшенная магическая версия доменной печи
+multiblock.MagicEBF.tooltip.01=Потребляет §bману§7 со скоростью §c1 §aMana Spreader
+multiblock.MagicEBF.tooltip.02=§aНе создаёт загрязнения
+
+#MagicGenerator
+multiblock.MagicGenerator=Магический генератор
+multiblock.MagicGenerator.machine_type=Генератор
+multiblock.MagicGenerator.tooltip.00=Генерирует EU из подключённых модулей
+multiblock.MagicGenerator.tooltip.01=Принимает §c1 §7тип модуля: §aЗемля §cОгонь §eВоздух §bВода §fПорядок §8Энтропия
+multiblock.MagicGenerator.tooltip.02=Каждый модуль: бонус §a+25%§7
+multiblock.MagicGenerator.tooltip.03=Итог = §6База §7× §6(1 + 0.25 × Модули)
+multiblock.MagicGenerator.tooltip.04=Используйте §6Инструмент связи структур§7 для подключения модулей
+
+#WaterModuleMagicGenerator
+multiblock.WaterModuleMagicGenerator=Водный модуль магического генератора
+multiblock.WaterModuleMagicGenerator.machine_type=Модуль магического генератора
+multiblock.WaterModuleMagicGenerator.tooltip.00=Работает только на §cЕвропе
+multiblock.WaterModuleMagicGenerator.tooltip.01=Аспекты:
+multiblock.WaterModuleMagicGenerator.tooltip.02=    Victus: §a7,500,000 EU/т
+multiblock.WaterModuleMagicGenerator.tooltip.03=    Victus + Limus: §a18,750,000 EU/т
+multiblock.WaterModuleMagicGenerator.tooltip.04=    Victus + Limus + Venenum: §a26,250,000 EU/т
+multiblock.WaterModuleMagicGenerator.tooltip.05=    Victus + Limus + Venenum + Tempestas: §a37,500,000 EU/т
+multiblock.WaterModuleMagicGenerator.tooltip.06=    Расход Victus: §b1,000 §7в секунду
+multiblock.WaterModuleMagicGenerator.tooltip.07=    Расход Limus: §b2,000 §7в секунду
+multiblock.WaterModuleMagicGenerator.tooltip.08=    Расход Venenum: §b3,000 §7в секунду
+multiblock.WaterModuleMagicGenerator.tooltip.09=    Расход Tempestas: §b4,000 §7в секунду
+multiblock.WaterModuleMagicGenerator.tooltip.10=Бонусы жидкостей:
+multiblock.WaterModuleMagicGenerator.tooltip.11=    Ледяной криотеум: §a20,000 L/s§r, §6x2§7 к энергии
+multiblock.WaterModuleMagicGenerator.tooltip.12=    Огненная кровь: §a10,000 L/s§r, §6x3§7 к энергии
+multiblock.WaterModuleMagicGenerator.tooltip.13=    Жидкая ДНК: §a50,000 L/s§r, §6x4§7 к энергии
+multiblock.WaterModuleMagicGenerator.tooltip.14=Катализаторы (§cдействуют 1 час§7)
+multiblock.WaterModuleMagicGenerator.tooltip.15=    Кровь Снежной королевы: §d512x§7 снижает расход жидкости на §625%
+multiblock.WaterModuleMagicGenerator.tooltip.16=    Блок звезды Незера: §d512x§7 снижает расход жидкости на §650%
+multiblock.WaterModuleMagicGenerator.tooltip.17=    Драконий камень: §d512x§7 снижает расход жидкости на §675%
+multiblock.WaterModuleMagicGenerator.tooltip.18=Итог EU/т = Базовый EU/т × Множитель жидкости
+
+#FireModuleMagicGenerator
+multiblock.FireModuleMagicGenerator=Огненный модуль магического генератора
+multiblock.FireModuleMagicGenerator.machine_type=Модуль магического генератора
+multiblock.FireModuleMagicGenerator.tooltip.00=Работает только в §cАду
+multiblock.FireModuleMagicGenerator.tooltip.01=Аспекты:
+multiblock.FireModuleMagicGenerator.tooltip.02=    Lux: §a100,000 EU/т§7, 4 аспекта в секунду
+multiblock.FireModuleMagicGenerator.tooltip.03=    Lux + Cognitio: §a250,000 EU/т§7, 4 аспекта в секунду
+multiblock.FireModuleMagicGenerator.tooltip.04=    Lux + Cognitio + Fames: §a350,000 EU/т§7, 4 аспекта в секунду
+multiblock.FireModuleMagicGenerator.tooltip.05=    Lux + Cognitio + Fames + Terminus: §a500,000 EU/т§7, 4 аспекта в секунду
+multiblock.FireModuleMagicGenerator.tooltip.06=Бонусы жидкостей:
+multiblock.FireModuleMagicGenerator.tooltip.07=    Лава: §a2,000 L/s§r, §6x2§7 к энергии
+multiblock.FireModuleMagicGenerator.tooltip.08=    Индиевый сплав 140: §a300 L/s§r, §6x3§7 к энергии
+multiblock.FireModuleMagicGenerator.tooltip.09=    Кровь: §a15,000 L/s§r, §6x4§7 к энергии
+multiblock.FireModuleMagicGenerator.tooltip.10=Катализаторы (§cдействуют 1 час§7)
+multiblock.FireModuleMagicGenerator.tooltip.11=    Усиленный сланец: §d128x§7 снижает расход жидкости на §625%
+multiblock.FireModuleMagicGenerator.tooltip.12=    Incendium: §d32x§7 снижает расход жидкости на §650%
+multiblock.FireModuleMagicGenerator.tooltip.13=    Offensa: §d8x§7 снижает расход жидкости на §675%
+multiblock.FireModuleMagicGenerator.tooltip.14=Итог EU/т = Базовый EU/т × Множитель жидкости
+
+#AirModuleMagicGenerator
+multiblock.AirModuleMagicGenerator=Воздушный модуль магического генератора
+multiblock.AirModuleMagicGenerator.machine_type=Модуль магического генератора
+multiblock.AirModuleMagicGenerator.tooltip.00=Работает только в §cКраю
+multiblock.AirModuleMagicGenerator.tooltip.01=Аспекты:
+multiblock.AirModuleMagicGenerator.tooltip.02=    Arbor: §a1,250,000 EU/т
+multiblock.AirModuleMagicGenerator.tooltip.03=    Arbor + Sensus: §a3,125,000 EU/т
+multiblock.AirModuleMagicGenerator.tooltip.04=    Arbor + Sensus + Volatus: §a4,375,000 EU/т
+multiblock.AirModuleMagicGenerator.tooltip.05=    Arbor + Sensus + Volatus + Auram: §a6,250,000 EU/т
+multiblock.AirModuleMagicGenerator.tooltip.06=    Расход Arbor: §b100 §7в секунду
+multiblock.AirModuleMagicGenerator.tooltip.07=    Расход Sensus: §b200 §7в секунду
+multiblock.AirModuleMagicGenerator.tooltip.08=    Расход Volatus: §b300 §7в секунду
+multiblock.AirModuleMagicGenerator.tooltip.09=    Расход Auram: §b400 §7в секунду
+multiblock.AirModuleMagicGenerator.tooltip.10=Бонусы жидкостей:
+multiblock.AirModuleMagicGenerator.tooltip.11=    Вода 1-го класса: §a2,000 L/s§r, §6x2§7 к энергии
+multiblock.AirModuleMagicGenerator.tooltip.12=    Эндерская слизь: §a300 L/s§r, §6x3§7 к энергии
+multiblock.AirModuleMagicGenerator.tooltip.13=    Аргон: §a1,000 L/s§r, §6x4§7 к энергии
+multiblock.AirModuleMagicGenerator.tooltip.14=Катализаторы (§cдействуют 1 час§7)
+multiblock.AirModuleMagicGenerator.tooltip.15=    Блок Salis Mundus: §d512x§7 снижает расход жидкости на §625%
+multiblock.AirModuleMagicGenerator.tooltip.16=    Блок пустотного металла: §d512x§7 снижает расход жидкости на §650%
+multiblock.AirModuleMagicGenerator.tooltip.17=    Ихор: §d32x§7 снижает расход жидкости на §675%
+multiblock.AirModuleMagicGenerator.tooltip.18=Итог EU/т = Базовый EU/т × Множитель жидкости
+
+#OrderModuleMagicGenerator
+multiblock.OrderModuleMagicGenerator=Модуль Порядка магического генератора
+multiblock.OrderModuleMagicGenerator.machine_type=Модуль магического генератора
+multiblock.OrderModuleMagicGenerator.tooltip.00=Работает только на §cЦерере
+multiblock.OrderModuleMagicGenerator.tooltip.01=Аспекты:
+multiblock.OrderModuleMagicGenerator.tooltip.02=    Permutation: §a75,000,000 EU/т
+multiblock.OrderModuleMagicGenerator.tooltip.03=    Permutation + Instrumentum: §a187,500,000 EU/т
+multiblock.OrderModuleMagicGenerator.tooltip.04=    Permutation + Instrumentum + Motus: §a262,500,000 EU/т
+multiblock.OrderModuleMagicGenerator.tooltip.05=    Permutation + Instrumentum + Motus + Aequalitas: §a375,000,000 EU/т
+multiblock.OrderModuleMagicGenerator.tooltip.06=    Расход Permutation: §b1,000 §7в секунду
+multiblock.OrderModuleMagicGenerator.tooltip.07=    Расход Instrumentum: §b2,000 §7в секунду
+multiblock.OrderModuleMagicGenerator.tooltip.08=    Расход Motus: §b6,000 §7в секунду
+multiblock.OrderModuleMagicGenerator.tooltip.09=    Расход Aequalitas: §b8,000 §7в секунду
+multiblock.OrderModuleMagicGenerator.tooltip.10=Бонусы жидкостей:
+multiblock.OrderModuleMagicGenerator.tooltip.11=    Жидкий кислород: §a100,000 L/s§r, §6x2§7 к энергии
+multiblock.OrderModuleMagicGenerator.tooltip.12=    Расплавленный празеодим: §a2,000 L/s§r, §6x3§7 к энергии
+multiblock.OrderModuleMagicGenerator.tooltip.13=    Жидкая смерть: §a20,000 L/s§r, §6x4§7 к энергии
+multiblock.OrderModuleMagicGenerator.tooltip.14=Катализаторы (§cдействуют 1 час§7)
+multiblock.OrderModuleMagicGenerator.tooltip.15=    Связующее супер-топлива: §d512x§7 снижает расход жидкости на §625%
+multiblock.OrderModuleMagicGenerator.tooltip.16=    Магическое твёрдое супер-топливо: §d512x§7 снижает расход жидкости на §650%
+multiblock.OrderModuleMagicGenerator.tooltip.17=    Первозданная жемчужина: §d4x§7 снижает расход жидкости на §675%
+multiblock.OrderModuleMagicGenerator.tooltip.18=Итог EU/т = Базовый EU/т × Множитель жидкости
+
+#EntropyModuleMagicGenerator
+multiblock.EntropyModuleMagicGenerator=Модуль Энтропии магического генератора
+multiblock.EntropyModuleMagicGenerator.machine_type=Модуль магического генератора
+multiblock.EntropyModuleMagicGenerator.tooltip.00=Работает только на §cБарнарде E
+multiblock.EntropyModuleMagicGenerator.tooltip.01=Аспекты:
+multiblock.EntropyModuleMagicGenerator.tooltip.02=    Vacuos: §a500,000,000 EU/т
+multiblock.EntropyModuleMagicGenerator.tooltip.03=    Vacuos + Mortus: §a1,250,000,000 EU/т
+multiblock.EntropyModuleMagicGenerator.tooltip.04=    Vacuos + Mortus + Vitium: §a1,750,000,000 EU/т
+multiblock.EntropyModuleMagicGenerator.tooltip.05=    Vacuos + Mortus + Vitium + Strontio: §a2,500,000,000 EU/т
+multiblock.EntropyModuleMagicGenerator.tooltip.06=    Расход Vacuos: §b2,000 §7в секунду
+multiblock.EntropyModuleMagicGenerator.tooltip.07=    Расход Mortus: §b4,000 §7в секунду
+multiblock.EntropyModuleMagicGenerator.tooltip.08=    Расход Vitium: §b12,000 §7в секунду
+multiblock.EntropyModuleMagicGenerator.tooltip.09=    Расход Strontio: §b16,000 §7в секунду
+multiblock.EntropyModuleMagicGenerator.tooltip.10=Бонусы жидкостей:
+multiblock.EntropyModuleMagicGenerator.tooltip.11=    Неизвестная жидкость: §a5,000 L/s§r, §6x2§7 к энергии
+multiblock.EntropyModuleMagicGenerator.tooltip.12=    UU-усилитель: §a20,000 L/s§r, §6x3§7 к энергии
+multiblock.EntropyModuleMagicGenerator.tooltip.13=    Кровь дракона: §a10,000 L/s§r, §6x4§7 к энергии
+multiblock.EntropyModuleMagicGenerator.tooltip.14=Катализаторы (§cдействуют 1 час§7)
+multiblock.EntropyModuleMagicGenerator.tooltip.15=    Красное сердце: §d2048x§7 снижает расход жидкости на §625%
+multiblock.EntropyModuleMagicGenerator.tooltip.16=    Жёлтое сердце: §d2048x§7 снижает расход жидкости на §650%
+multiblock.EntropyModuleMagicGenerator.tooltip.17=    Зелёное сердце: §d2048x§7 снижает расход жидкости на §675%
+multiblock.EntropyModuleMagicGenerator.tooltip.18=Итог EU/т = Базовый EU/т × Множитель жидкости
+
+#EarthModuleMagicGenerator
+multiblock.EarthModuleMagicGenerator=Земляной модуль магического генератора
+multiblock.EarthModuleMagicGenerator.machine_type=Модуль магического генератора
+multiblock.EarthModuleMagicGenerator.tooltip.00=Работает только в §cСумеречном лесу
+multiblock.EarthModuleMagicGenerator.tooltip.01=Аспекты:
+multiblock.EarthModuleMagicGenerator.tooltip.02=    Metallum: §a10,000 EU/т§7, 4 аспекта в секунду
+multiblock.EarthModuleMagicGenerator.tooltip.03=    Metallum + Vitreus: §a25,000 EU/т§7, 4 аспекта в секунду
+multiblock.EarthModuleMagicGenerator.tooltip.04=    Metallum + Vitreus + Herba: §a35,000 EU/т§7, 4 аспекта в секунду
+multiblock.EarthModuleMagicGenerator.tooltip.05=    Metallum + Vitreus + Herba + Iter: §a50,000 EU/т§7, 4 аспекта в секунду
+multiblock.EarthModuleMagicGenerator.tooltip.06=Бонусы жидкостей:
+multiblock.EarthModuleMagicGenerator.tooltip.07=    Смазка: §a3,000 L/s§r, §6x2§7 к энергии
+multiblock.EarthModuleMagicGenerator.tooltip.08=    Радон: §a500 L/s§r, §6x3§7 к энергии
+multiblock.EarthModuleMagicGenerator.tooltip.09=    Мана: §a3,000 L/s§r, §6x4§7 к энергии
+multiblock.EarthModuleMagicGenerator.tooltip.10=Катализаторы (§cдействуют 1 час§7)
+multiblock.EarthModuleMagicGenerator.tooltip.11=    Манасталь: §d32x§7 снижает расход жидкости на §625%
+multiblock.EarthModuleMagicGenerator.tooltip.12=    Руна Земли: §d8x§7 снижает расход жидкости на §650%
+multiblock.EarthModuleMagicGenerator.tooltip.13=    Террасталь: §d1x§7 снижает расход жидкости на §675%
+multiblock.EarthModuleMagicGenerator.tooltip.14=Итог EU/т = Базовый EU/т × Множитель жидкости
+
+#Item Crate
+multiblock.ItemCrate=Ящик предметов
+multiblock.ItemCrate.machine_type=Мультиблочное хранилище предметов
+multiblock.ItemCrate.tooltip.00=Хранит до §a576§7 обычных стаков предметов.
+multiblock.ItemCrate.tooltip.01=Щёлкните ПКМ по собранному контроллеру, чтобы открыть внутренний инвентарь.
+multiblock.ItemCrate.tooltip.02=Оболочка 3x3x3 состоит из §fпрочных стальных корпусов машин§7 и имеет пустой центр.
+multiblock.ItemCrate.tooltip.03=Содержимое сохраняется в предмете контроллера при его разрушении.
+GTN.ItemCrate.slots=Занято слотов: %s/%s
+GTN.ItemCrate.structureRequired=§cСтруктура ящика предметов должна быть собрана перед открытием хранилища.
+GTN.ItemCrate.sort=Сортировать и уплотнить хранилище
+GTN.ItemCrate.depositAll=Переместить все предметы из инвентаря
+GTN.ItemCrate.search=Поиск
+
+#RecipeResult
+multiblock.reciperesult.range_tier=§cМакс. тир напряжения: %s - %s
+multiblock.reciperesult.max_tier=§cМакс. тир напряжения: %s
+
+#Authors
+Author_EvgenWarGold=Автор: §cEvgen§9War§6Gold
+EvgenWarGold=§cEvgen§9War§6Gold
+Author_Crazer=Автор: §aCrazer
+Crazer=§aCrazer
+Author_Totto=Автор: §bTotto
+Totto=§bTotto
+Author_Structure=Автор структуры: §6%s
+
+#Hatch
+GTN.gui.text.sensor=Порог обнаружения
+GTN.Hatch.common.addedBy=Добавлено: %s
+GTN.Hatch.SensorHatch.tooltip.00=Считывает информацию с мультиблока.
+GTN.Hatch.SensorHatch.tooltip.01=Нажмите ПКМ, чтобы открыть GUI и изменить настройки.
+GTN.Hatch.ManaHatch.tooltip.00=Хранит ману из Botania
+GTN.Hatch.ManaHatch.tooltip.01=§7Вместимость:§c 1§7 бассейн маны
+GTN.Hatch.ManaHatch.tooltip.02=§7Принимает ману от: §aраспространителей маны§7
+GTN.Hatch.ManaHatch.tooltip.03=§7Используйте §aПосох леса§7, чтобы посмотреть количество маны
+GTN.Hatch.AspectHatch.tooltip.00=Хранит эссенцию из Thaumcraft
+GTN.Hatch.AspectHatch.tooltip.01=§7Вместимость: §a256 §7единиц любого аспекта
+GTN.Hatch.AspectHatch.tooltip.02=§7Принимает эссенцию от: §aэссенциальных труб§7
+GTN.Hatch.MeAspectHatch.tooltip.00=§7Извлекает эссенцию напрямую из ME-сети
+GTN.Hatch.MeAspectHatch.tooltip.01=§7Подключите ME-кабель к: §aпередней стороне
+GTN.Hatch.MeAspectHatch.waila.online=ME-сеть: §aВ сети
+GTN.Hatch.MeAspectHatch.waila.offline=ME-сеть: §cНе в сети
+GTN.Hatch.WildcardPatternBuffer.tooltip.00=Один закодированный шаблон разворачивается для каждого совместимого материала GregTech.
+GTN.Hatch.WildcardPatternBuffer.tooltip.01=Поддерживает предметные и жидкостные шаблоны обработки AE через AE2 Fluid Crafting.
+GTN.Hatch.WildcardPatternBuffer.tooltip.02=Программируемая схема и девять общих слотов доступны в отдельном GUI.
+GTN.Hatch.WildcardPatternBuffer.tooltip.03=Чёрный список поддерживает режим входного материала и режим точного выхода.
+GTN.Hatch.WildcardPatternBuffer.tooltip.04=Размер стака токена задаёт требуемое число предметов или объём жидкости в mB.
+GTN.Hatch.WildcardPatternBuffer.tooltip.05=Требует канал AE.
+GTN.Wildcard.patternOptimization.allowed=Оптимизация шаблонов:\n§7Разрешена
+GTN.Wildcard.patternOptimization.disabled=Оптимизация шаблонов:\n§7Отключена
+
+#Others
+GTN.TooltipBuilder.basic_info=Основная информация:
+GTN.TooltipBuilder.ExoticHatch=Многоамперный | Лазерный люк
+GTN.TooltipBuilder.ExoticOrEnergyHatch=Многоамперный | Лазерный | Энергетический люк
+GTN.TooltipBuilder.DynamoOrBufferedHatch=Энерговывод | Буферизированный люк
+GTN.TooltipBuilder.ManaHatch=Люк маны
+GTN.TooltipBuilder.AspectHatch=Люк аспектов
+GTN.TooltipBuilder.MeAspectHatch=ME-люк аспектов
+GTN.TooltipBuilder.HatchRequirement= - минимум %s шт. на любом блоке, отмеченном точкой подсказки %s
+GTN.StructureLib.text.missing_block=§cОтсутствует блок: %s
+GTN.StructureLib.text.invalid_placement=§cНеверное расположение блока
+GTN.Tooltip.mana_hud.tier.0=§cТир I
+GTN.Tooltip.mana_hud.tier.1=§eТир II
+GTN.Tooltip.mana_hud.tier.2=§bТир III
+GTN.Tooltip.mana_hud.tier.3=§aТир IV
+GTN.Tooltip.mana_hud.tier.4=§dТир V
+GTN.Tooltip.mana_hud.tier.5=§6Тир VI
+GTN.MetaBlockItem.mob_spawn=Мобы не могут появляться на этом блоке
+GTN.MetaBlockItem.not_tilentity=Это НЕ TileEntity!
+
+#Mana Prospector Tooltip
+GTN.Tooltip.item.ManaProspector.0=Бонус тира: §a+1 §7чанк за тир
+GTN.Tooltip.item.ManaProspector.1=Радиус сканирования: §a%s §7чанков
+GTN.Tooltip.item.ManaProspector.2=Стоимость сканирования: §c1/100 §7Mana Pool
+GTN.Tooltip.item.ManaProspector.3=Бросьте в бассеин маны для зарядки
+GTN.Tooltip.item.ManaProspector.4=ПКМ: сканировать область
+GTN.Tooltip.item.ManaProspector.5=Shift+ПКМ: сменить режим
+GTN.Tooltip.item.ManaProspector.error_scan=§cНедостаточно маны
+
+# Wildcard Pattern Buffer core
+item.GTN_WildcardPrefix.ingot.name=Шаблон: любой слиток
+item.GTN_WildcardPrefix.plate.name=Шаблон: любая пластина
+item.GTN_WildcardPrefix.dust.name=Шаблон: любая пыль
+item.GTN_WildcardPrefix.stick.name=Шаблон: любой стержень
+item.GTN_WildcardPrefix.screw.name=Шаблон: любой винт
+item.GTN_WildcardPrefix.bolt.name=Шаблон: любой болт
+item.GTN_WildcardPrefix.ring.name=Шаблон: любой кольцо
+item.GTN_WildcardPrefix.foil.name=Шаблон: любая фольга
+item.GTN_WildcardPrefix.gear.name=Шаблон: любая шестерня
+item.GTN_WildcardPrefix.wire1x.name=Шаблон: любой провод 1x
+item.GTN_WildcardPrefix.cable1x.name=Шаблон: любой кабель 1x
+item.GTN_WildcardPrefix.frame.name=Шаблон: любой каркас
+item.GTN_WildcardPrefix.gem.name=Шаблон: любой самоцвет
+item.GTN_WildcardPrefix.block.name=Шаблон: любой блок материала
+item.GTN_WildcardPrefix.nugget.name=Шаблон: любой самородок
+item.GTN_WildcardPrefix.dense_plate.name=Шаблон: любая плотная пластина
+GTN.Wildcard.tooltip.prefix=Шаблонный ore-префикс: %s
+GTN.Wildcard.tooltip.pattern=Используйте его на входной или выходной стороне шаблона обработки AE.
+GTN.Wildcard.tooltip.expand=Специальный ME-буфер шаблонов с подстановкой разворачивает его для каждого материала GT.
+GTN.Wildcard.tooltip.phantom=Фантомный токен: машина его не расходует.
+
+GTN.Wildcard.hatch.name=ME-буфер шаблонов с подстановкой
+GTN.Wildcard.hatch.normalBus=Обычные входные ME-шины крафта игнорируют шаблоны с подстановкой.
+
+# Wildcard material parts and fluids (v0.3.0)
+item.GTN_WildcardPrefix.hot_ingot.name=Шаблон: любой горячий слиток
+item.GTN_WildcardPrefix.tiny_dust.name=Шаблон: любая крошечная пыль
+item.GTN_WildcardPrefix.small_dust.name=Шаблон: любая малая пыль
+item.GTN_WildcardPrefix.chipped_gem.name=Шаблон: любой сколотый самоцвет
+item.GTN_WildcardPrefix.flawed_gem.name=Шаблон: любой дефектный самоцвет
+item.GTN_WildcardPrefix.flawless_gem.name=Шаблон: любой безупречный самоцвет
+item.GTN_WildcardPrefix.exquisite_gem.name=Шаблон: любой совершенный самоцвет
+item.GTN_WildcardPrefix.double_plate.name=Шаблон: любая двойная пластина
+item.GTN_WildcardPrefix.triple_plate.name=Шаблон: любая тройная пластина
+item.GTN_WildcardPrefix.quadruple_plate.name=Шаблон: любая четверная пластина
+item.GTN_WildcardPrefix.quintuple_plate.name=Шаблон: любая пятерная пластина
+item.GTN_WildcardPrefix.item_casing.name=Шаблон: любой корпус предмета
+item.GTN_WildcardPrefix.long_stick.name=Шаблон: любой длинный стержень
+item.GTN_WildcardPrefix.round.name=Шаблон: любой шарик
+item.GTN_WildcardPrefix.small_spring.name=Шаблон: любая малая пружина
+item.GTN_WildcardPrefix.spring.name=Шаблон: любая пружина
+item.GTN_WildcardPrefix.fine_wire.name=Шаблон: любоая тонкая проволока
+item.GTN_WildcardPrefix.rotor.name=Шаблон: любой ротор
+item.GTN_WildcardPrefix.small_gear.name=Шаблон: любая малая шестерня
+item.GTN_WildcardPrefix.wire2x.name=Шаблон: любой провод 2x
+item.GTN_WildcardPrefix.wire4x.name=Шаблон: любой провод 4x
+item.GTN_WildcardPrefix.wire8x.name=Шаблон: любой провод 8x
+item.GTN_WildcardPrefix.wire12x.name=Шаблон: любой провод 12x
+item.GTN_WildcardPrefix.wire16x.name=Шаблон: любой провод 16x
+item.GTN_WildcardPrefix.cable2x.name=Шаблон: любой кабель 2x
+item.GTN_WildcardPrefix.cable4x.name=Шаблон: любой кабель 4x
+item.GTN_WildcardPrefix.cable8x.name=Шаблон: любой кабель 8x
+item.GTN_WildcardPrefix.cable12x.name=Шаблон: любой кабель 12x
+item.GTN_WildcardPrefix.cable16x.name=Шаблон: любой кабель 16x
+item.GTN_WildcardPrefix.lens.name=Шаблон: любая линза
+item.GTN_WildcardPrefix.turbine_blade.name=Шаблон: любая лопасть турбины
+item.GTN_WildcardPrefix.cell.name=Шаблон: любая жидкостная ячейка
+item.GTN_WildcardPrefix.molten_cell.name=Шаблон: любая ячейка расплава
+item.GTN_WildcardPrefix.tiny_pipe.name=Шаблон: любая крошечная труба
+item.GTN_WildcardPrefix.small_pipe.name=Шаблон: любая малая труба
+item.GTN_WildcardPrefix.medium_pipe.name=Шаблон: любая средняя труба
+item.GTN_WildcardPrefix.large_pipe.name=Шаблон: любая большая труба
+item.GTN_WildcardPrefix.huge_pipe.name=Шаблон: любая огромная труба
+item.GTN_WildcardPrefix.quadruple_pipe.name=Шаблон: любая 4x труба
+item.GTN_WildcardPrefix.nonuple_pipe.name=Шаблон: любая 9x труба
+item.GTN_WildcardPrefix.tiny_restrictive_pipe.name=Шаблон: любая крошечная ограничительная труба
+item.GTN_WildcardPrefix.small_restrictive_pipe.name=Шаблон: любая малая ограничительная труба
+item.GTN_WildcardPrefix.medium_restrictive_pipe.name=Шаблон: любая средняя ограничительная труба
+item.GTN_WildcardPrefix.large_restrictive_pipe.name=Шаблон: любая большая ограничительная труба
+item.GTN_WildcardPrefix.huge_restrictive_pipe.name=Шаблон: любая огромная ограничительная труба
+item.GTN_WildcardPrefix.fluid.name=Шаблон: любая жидкость материала
+item.GTN_WildcardPrefix.molten_fluid.name=Шаблон: любой расплавленный материал
+GTN.Wildcard.tooltip.fluid=Стак жидкости AE
+GTN.Wildcard.tooltip.fluidAmount=Количество токенов интерпретируется как миллибакеты (mB).
+GTN.Wildcard.blacklist.title=Чёрный список
+GTN.Wildcard.blacklist.open=Открыть чёрный список рецептов с подстановкой
+GTN.Wildcard.blacklist.mode.input=Режим: входной материал
+GTN.Wildcard.blacklist.mode.output=Режим: точный выход
+GTN.Wildcard.blacklist.mode.input.tooltip=Режим входа: предмет блокирует все рецепты с подстановкой, развёрнутые для того же материала GregTech.
+GTN.Wildcard.blacklist.mode.output.tooltip=Режим выхода: предмет блокирует только рецепты, чей итоговый выход точно ему соответствует.
+GTN.Wildcard.blacklist.clear=Очистить чёрный список
+GTN.Wildcard.blacklist.page=Страница %s/%s
+GTN.Wildcard.blacklist.page.previous=Предыдущая страница чёрного списка
+GTN.Wildcard.blacklist.page.next=Следующая страница чёрного списка
+GTN.Wildcard.tooltip.author=Автор: %s
+GTN.Wildcard.tooltip.addedBy=Добавлено: %s
+GTN.Wildcard.tooltip.dragFromNei=Перетащите из NEI во входной или выходной слот терминала шаблонов.
+
+#Large BioLab
+multiblock.LargeBioLab=Большая биолаборатория
+multiblock.LargeBioLab.machine_type=Биоинженерная станция
+multiblock.LargeBioLab.tooltip.00=Гарантированный выход вместо вероятностных результатов обычной биолаборатории
+multiblock.LargeBioLab.tooltip.01=Расходует больше ресурсов, чем обычная биолаборатория
+multiblock.LargeBioLab.tooltip.02=Требует энергетический люк не ниже §5UV§7
+multiblock.LargeBioLab.tooltip.03=Тир стекла должен быть не ниже тира рецепта
+multiblock.LargeBioLab.tooltip.04=Каждый тир стекла выше тира рецепта снижает расход жидкостей на 10% (макс. 80%)
+multiblock.LargeBioLab.recipe_info.minimum_glass_tier=Минимальный тир стекла: %s
+multiblock.LargeBioLab.recipe_info.glass_tier_bonus=Каждый тир стекла выше тира рецепта:
+multiblock.LargeBioLab.recipe_info.fluid_discount=снижает расход жидкостей на 10% (макс. 80%)
+
+# GT machine names - standard localization keys
+gt.blockmachines.sensor_hatch.name=Сенсорный люк
+gt.blockmachines.mana_hatch.name=Люк маны
+gt.blockmachines.aspect_hatch.name=Люк аспектов
+gt.blockmachines.me_aspect_hatch.name=ME-люк аспектов
+gt.blockmachines.me_wildcard_pattern_buffer.name=ME-буфер шаблонов с подстановкой
+
+# Welcome message
+GTN.Welcome.header=GregTechNightmare от %s
+GTN.Welcome.description.0=Добавляет новые мультиблоки и изменения для GTNH.
+GTN.Welcome.description.1=Что-то становится проще, что-то — сложнее.
+GTN.Welcome.description.2=Всё ради большего веселья и хаоса!
+GTN.Welcome.greeting=Наслаждайся кошмаром, %s. Играй со стилем!
+GTN.Welcome.github.label=GitHub:
+GTN.Welcome.github.open=Нажмите, чтобы открыть
+GTN.Welcome.github.hover=Нажмите, чтобы открыть репозиторий GitHub

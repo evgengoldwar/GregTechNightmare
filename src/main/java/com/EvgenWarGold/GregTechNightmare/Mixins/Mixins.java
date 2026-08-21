@@ -18,6 +18,7 @@ public enum Mixins implements IMixins {
             "MTEAdvancedDebugStructureWriterMixins",
             "FixGalaxySpaceCapeCrushMixins",
             "MultiblockTooltipBuilderAccessor",
+            "ItemMachinesMixin",
             "EntityManaBurstMixin",
             "TileSpreaderMixin",
             "HUDHandlerBotaniaMixin",

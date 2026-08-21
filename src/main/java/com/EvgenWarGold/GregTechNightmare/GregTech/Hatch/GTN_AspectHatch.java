@@ -24,6 +24,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 import com.EvgenWarGold.GregTechNightmare.GregTech.Textures.GTN_BlockIcons;
 import com.EvgenWarGold.GregTechNightmare.ModBlocks.ThaumcraftBlocks;
 import com.EvgenWarGold.GregTechNightmare.Utils.Constants;
+import com.EvgenWarGold.GregTechNightmare.Utils.GTN_Utils;
 
 import gregtech.api.enums.Textures;
 import gregtech.api.interfaces.IIconContainer;
@@ -42,6 +43,7 @@ import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.aspects.IAspectContainer;
 import thaumcraft.api.aspects.IEssentiaTransport;
 
+@IMetaTileEntity.SkipGenerateDescription
 public class GTN_AspectHatch extends MTEHatch implements IAspectContainer, IEssentiaTransport {
 
     public static final int CAPACITY = 256;
@@ -137,8 +139,9 @@ public class GTN_AspectHatch extends MTEHatch implements IAspectContainer, IEsse
 
     @Override
     public String[] getDescription() {
-        return new String[] { "Stores Essentia from Thaumcraft", "§7Capacity: §a256 §7of any aspect",
-            "§7Accepts Essentia From: §aEssentia Tubes§7", "Added by: " + Constants.MOD_NAME };
+        return new String[] { GTN_Utils.tr("GTN.Hatch.AspectHatch.tooltip.00"),
+            GTN_Utils.tr("GTN.Hatch.AspectHatch.tooltip.01"), GTN_Utils.tr("GTN.Hatch.AspectHatch.tooltip.02"),
+            GTN_Utils.tr("GTN.Hatch.common.addedBy", Constants.MOD_NAME) };
     }
 
     @Override

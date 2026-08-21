@@ -1,7 +1,6 @@
 package com.EvgenWarGold.GregTechNightmare.GregTech.Wildcard;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.IdentityHashMap;

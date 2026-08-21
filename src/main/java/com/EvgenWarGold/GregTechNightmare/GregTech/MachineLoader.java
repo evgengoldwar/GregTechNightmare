@@ -38,6 +38,7 @@ import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.Processing.STEAM.G
 import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.Processing.STEAM.GTN_AdvancedCokeOven;
 import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.Processing.STEAM.GTN_BronzeVoidMiner;
 import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.Processing.UHV.GTN_UltimatePrecise;
+import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.Processing.UV.GTN_LargeBioLab;
 import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.Processing.ZPM.GTN_ZeroPowerWireMill;
 
 public final class MachineLoader {
@@ -83,6 +84,7 @@ public final class MachineLoader {
         GTN_ItemList.MeAspectHatch.set(new GTN_MeAspectHatch(21_036, "ME Aspect Hatch"));
         GTN_ItemList.WildcardPatternBuffer.set(new GTN_WildcardPatternBuffer(21_037, "ME Wildcard Pattern Buffer"));
         GTN_ItemList.ItemCrate.set(new GTN_ItemCrate(21_038, "ItemCrate"));
+        GTN_ItemList.LargeBioLab.set(new GTN_LargeBioLab(21_039, "LargeBioLab"));
         // spotless:on
     }
 }

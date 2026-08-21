@@ -27,6 +27,7 @@ gtn.recipe.GasCollectorRecipes=Gas Collector
 gtn.recipe.VacuumNukeRecipes=Vacuum Nuke
 gtn.recipe.ImprovedAlgaeFarmRecipes=Improved Algae Farm
 gtn.recipe.ImprovedSliceNSpliceRecipes= Improved Slice'N'Splice
+gtn.recipe.LargeBioLabRecipes=Large Bio Lab
 
 #RecipeUtils
 gtn.recipe.utils.all_logs=All Logs
@@ -447,6 +448,28 @@ Author_Structure=Structure author: §6%s
 
 #Hatch
 GTN.gui.text.sensor=Detection Threshold
+GTN.Hatch.common.addedBy=Added by: %s
+GTN.Hatch.SensorHatch.tooltip.00=Reads info from Multiblock.
+GTN.Hatch.SensorHatch.tooltip.01=Right click to open the GUI and change settings.
+GTN.Hatch.ManaHatch.tooltip.00=Stores Mana from Botania
+GTN.Hatch.ManaHatch.tooltip.01=§7Capacity:§c 1§7 Mana Pool
+GTN.Hatch.ManaHatch.tooltip.02=§7Accepts Mana From: §aMana Spreaders§7
+GTN.Hatch.ManaHatch.tooltip.03=§7Use §aWand of the Forest§7 to show mana
+GTN.Hatch.AspectHatch.tooltip.00=Stores Essentia from Thaumcraft
+GTN.Hatch.AspectHatch.tooltip.01=§7Capacity: §a256 §7of any aspect
+GTN.Hatch.AspectHatch.tooltip.02=§7Accepts Essentia From: §aEssentia Tubes§7
+GTN.Hatch.MeAspectHatch.tooltip.00=§7Extracts essentia directly from ME Network
+GTN.Hatch.MeAspectHatch.tooltip.01=§7Connect ME cable to: §afront face
+GTN.Hatch.MeAspectHatch.waila.online=ME Network: §aOnline
+GTN.Hatch.MeAspectHatch.waila.offline=ME Network: §cOffline
+GTN.Hatch.WildcardPatternBuffer.tooltip.00=One encoded pattern expands for every compatible GregTech material.
+GTN.Hatch.WildcardPatternBuffer.tooltip.01=Supports AE item and fluid processing patterns through AE2 Fluid Crafting.
+GTN.Hatch.WildcardPatternBuffer.tooltip.02=Programmed Circuit and nine shared slots are available in the dedicated GUI.
+GTN.Hatch.WildcardPatternBuffer.tooltip.03=Blacklist supports material-wide input mode and exact output mode.
+GTN.Hatch.WildcardPatternBuffer.tooltip.04=Wildcard token stack size becomes the requested item count or fluid amount in mB.
+GTN.Hatch.WildcardPatternBuffer.tooltip.05=Requires an AE channel.
+GTN.Wildcard.patternOptimization.allowed=Pattern Optimization:\n§7Allowed
+GTN.Wildcard.patternOptimization.disabled=Pattern Optimization:\n§7Disabled
 
 #Others
 GTN.TooltipBuilder.basic_info=Basic Info:
@@ -456,6 +479,7 @@ GTN.TooltipBuilder.DynamoOrBufferedHatch=Dynamo | Buffered Hatch
 GTN.TooltipBuilder.ManaHatch=Mana Hatch
 GTN.TooltipBuilder.AspectHatch=Aspect Hatch
 GTN.TooltipBuilder.MeAspectHatch=ME Aspect Hatch
+GTN.TooltipBuilder.HatchRequirement= - at least %s in any hint dot %s block
 GTN.StructureLib.text.missing_block=§cMissing block: %s
 GTN.StructureLib.text.invalid_placement=§cInvalid block placement
 GTN.Tooltip.mana_hud.tier.0=§cTier I
@@ -564,3 +588,32 @@ GTN.Wildcard.blacklist.page.next=Next blacklist page
 GTN.Wildcard.tooltip.author=Author: %s
 GTN.Wildcard.tooltip.addedBy=Added by: %s
 GTN.Wildcard.tooltip.dragFromNei=Drag from NEI into an input or output slot of a Pattern Terminal.
+
+#Large BioLab
+multiblock.LargeBioLab=Large Bio Lab
+multiblock.LargeBioLab.machine_type=Bioengineering Station
+multiblock.LargeBioLab.tooltip.00=Guaranteed outputs instead of chance-based Bio Lab results
+multiblock.LargeBioLab.tooltip.01=Uses more resources than the original Bio Lab
+multiblock.LargeBioLab.tooltip.02=Requires at least a §5UV§7 energy hatch
+multiblock.LargeBioLab.tooltip.03=Glass tier must be at least the recipe tier
+multiblock.LargeBioLab.tooltip.04=Each glass tier above the recipe tier reduces fluid usage by 10% (max 80%)
+multiblock.LargeBioLab.recipe_info.minimum_glass_tier=Minimum glass tier: %s
+multiblock.LargeBioLab.recipe_info.glass_tier_bonus=Each glass tier above recipe:
+multiblock.LargeBioLab.recipe_info.fluid_discount=10% fluid discount (max 80%)
+
+# GT machine names - standard localization keys
+gt.blockmachines.sensor_hatch.name=Sensor Hatch
+gt.blockmachines.mana_hatch.name=Mana Hatch
+gt.blockmachines.aspect_hatch.name=Aspect Hatch
+gt.blockmachines.me_aspect_hatch.name=ME Aspect Hatch
+gt.blockmachines.me_wildcard_pattern_buffer.name=ME Wildcard Pattern Buffer
+
+# Welcome message
+GTN.Welcome.header=GregTechNightmare by %s
+GTN.Welcome.description.0=Adds new multiblocks and tweaks to GTNH.
+GTN.Welcome.description.1=Makes some things easier, some things harder.
+GTN.Welcome.description.2=All for more fun and chaos!
+GTN.Welcome.greeting=Enjoy the nightmare, %s. Play with style!
+GTN.Welcome.github.label=GitHub:
+GTN.Welcome.github.open=Click to open
+GTN.Welcome.github.hover=Click to open GitHub repository

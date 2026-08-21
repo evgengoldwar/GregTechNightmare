@@ -24,8 +24,7 @@ public final class WildcardPatternRuntime {
 
     private static final Map<Object, ActivePattern> ACTIVE_PATTERNS = new WeakHashMap<>();
     private static final Map<Class<?>, Method> IS_EMPTY_METHODS = new ConcurrentHashMap<>();
-    private static final Set<Class<?>> MISSING_IS_EMPTY_METHODS = Collections
-        .newSetFromMap(new ConcurrentHashMap<>());
+    private static final Set<Class<?>> MISSING_IS_EMPTY_METHODS = Collections.newSetFromMap(new ConcurrentHashMap<>());
 
     private WildcardPatternRuntime() {}
 
@@ -122,8 +121,7 @@ public final class WildcardPatternRuntime {
 
         GTDualInputPattern result = new GTDualInputPattern();
         result.inputItems = items.toArray(new ItemStack[0]);
-        result.inputFluid = fluids.isEmpty() ? GTValues.emptyFluidStackArray
-            : fluids.toArray(new FluidStack[0]);
+        result.inputFluid = fluids.isEmpty() ? GTValues.emptyFluidStackArray : fluids.toArray(new FluidStack[0]);
         return result;
     }
 

@@ -26,6 +26,7 @@ import gregtech.api.metatileentity.implementations.MTEHatch;
 import gregtech.api.render.TextureFactory;
 import gregtech.common.gui.modularui.widget.CoverCycleButtonWidget;
 
+@IMetaTileEntity.SkipGenerateDescription
 public class GTN_SensorHatch extends MTEHatch {
 
     protected double threshold = 0;
@@ -36,7 +37,7 @@ public class GTN_SensorHatch extends MTEHatch {
     private static final IIconContainer textureFont_Glow = Textures.BlockIcons.OVERLAY_HATCH_HEAT_SENSOR_GLOW;
 
     public GTN_SensorHatch(int aID, String aName) {
-        super(aID, aName, aName, 3, 0, "Reads info from multiblock.");
+        super(aID, aName, aName, 3, 0, "");
     }
 
     public GTN_SensorHatch(String aName, int aTier, String[] aDescription, ITexture[][][] aTextures) {
@@ -84,8 +85,9 @@ public class GTN_SensorHatch extends MTEHatch {
 
     @Override
     public String[] getDescription() {
-        return new String[] { "Reads info from MultiBlock.", "Right click to open the GUI and change settings.",
-            "Added by: " + Constants.MOD_NAME };
+        return new String[] { GTN_Utils.tr("GTN.Hatch.SensorHatch.tooltip.00"),
+            GTN_Utils.tr("GTN.Hatch.SensorHatch.tooltip.01"),
+            GTN_Utils.tr("GTN.Hatch.common.addedBy", Constants.MOD_NAME) };
     }
 
     @Override
