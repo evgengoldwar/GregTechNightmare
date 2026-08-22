@@ -5,22 +5,16 @@ import static gregtech.api.enums.HatchElement.InputBus;
 import static gregtech.api.enums.HatchElement.InputHatch;
 import static gregtech.api.enums.HatchElement.Maintenance;
 import static gregtech.api.enums.HatchElement.OutputBus;
-import static gregtech.api.util.GTStructureUtility.chainAllGlasses;
 
 import java.util.List;
 import java.util.stream.Stream;
 
 import javax.annotation.Nonnull;
 
-import net.minecraft.item.ItemStack;
+import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.MultiBlockClasses.*;
 
 import com.EvgenWarGold.GregTechNightmare.GregTech.Api.MultiblockArea;
 import com.EvgenWarGold.GregTechNightmare.GregTech.Api.MultiblockOffsets;
-import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.MultiBlockClasses.GTN_Casings;
-import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.MultiBlockClasses.GTN_MultiBlockBase;
-import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.MultiBlockClasses.GTN_MultiBlockTooltipBuilder;
-import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.MultiBlockClasses.GTN_ProcessingLogic;
-import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.MultiBlockClasses.StructureVariant;
 import com.EvgenWarGold.GregTechNightmare.GregTech.Recipe.GTN_Recipe;
 import com.EvgenWarGold.GregTechNightmare.Utils.Authors;
 import com.EvgenWarGold.GregTechNightmare.Utils.GTN_Utils;
@@ -31,20 +25,19 @@ import cpw.mods.fml.relauncher.SideOnly;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.SoundResource;
 import gregtech.api.enums.VoltageIndex;
-import gregtech.api.interfaces.tileentity.IGregTechTileEntity;
 import gregtech.api.logic.ProcessingLogic;
 import gregtech.api.recipe.RecipeMap;
 import gregtech.api.recipe.check.CheckRecipeResult;
 import gregtech.api.recipe.check.CheckRecipeResultRegistry;
-import gregtech.api.structure.error.StructureError;
 import gregtech.api.util.GTRecipe;
 import gregtech.api.util.ParallelHelper;
 import gregtech.nei.RecipeDisplayInfo;
 import it.unimi.dsi.fastutil.Pair;
+import org.jetbrains.annotations.NotNull;
 
 public class GTN_LargeBioLab extends GTN_MultiBlockBase<GTN_LargeBioLab> {
 
-    private int glassTier = -1;
+    private final CasingData glass = createCasingData("glass");
 
     public GTN_LargeBioLab(int id, String name) {
         super(id, name);
@@ -103,16 +96,10 @@ public class GTN_LargeBioLab extends GTN_MultiBlockBase<GTN_LargeBioLab> {
     }
 
     @Override
-    public void checkMachine(IGregTechTileEntity gte, ItemStack stack, List<StructureError> errors) {
-        glassTier = -1;
-        super.checkMachine(gte, stack, errors);
-    }
-
-    @Override
     public IStructureDefinition<GTN_LargeBioLab> getStructureDefinition() {
         return buildStructureDefinition(
             builder -> builder
-                .addElement('G', chainAllGlasses(-1, (te, tier) -> te.glassTier = tier, te -> te.glassTier))
+                .addAllGlasses('G', glass)
                 .addCasing('C', GTN_Casings.CleanStainlessSteelMachineCasing)
                 .addCasing('F', GTN_Casings.FilterMachineCasing)
                 .addCasing('U', GTN_Casings.UVMachineCasing)
@@ -124,17 +111,17 @@ public class GTN_LargeBioLab extends GTN_MultiBlockBase<GTN_LargeBioLab> {
         return new GTN_ProcessingLogic() {
 
             @Override
-            public CheckRecipeResult process() {
-                setEuModifier(GTN_LargeBioLab.this.getEuModifier());
-                setSpeedBonus(1F / GTN_LargeBioLab.this.getSpeedBonus());
-                setOverclockType(GTN_LargeBioLab.this.getOverclockType());
+            public @NotNull CheckRecipeResult process() {
+                setEuModifier(getEuModifier());
+                setSpeedBonus(1F / getSpeedBonus());
+                setOverclockType(getOverclockType());
                 return super.process();
             }
 
             @Nonnull
             @Override
             protected CheckRecipeResult validateRecipe(@Nonnull GTRecipe recipe) {
-                if (glassTier < recipe.mSpecialValue) {
+                if (glass.getCasingTier() < recipe.mSpecialValue) {
                     return CheckRecipeResultRegistry.insufficientMachineTier(recipe.mSpecialValue);
                 }
                 return CheckRecipeResultRegistry.SUCCESSFUL;
@@ -147,14 +134,14 @@ public class GTN_LargeBioLab extends GTN_MultiBlockBase<GTN_LargeBioLab> {
                 return map.getAllRecipes()
                     .stream()
                     .filter(
-                        recipe -> GTN_LargeBioLab.this.applyGlassDiscount(recipe)
+                        recipe -> applyGlassDiscount(recipe)
                             .maxParallelCalculatedByInputs(1, inputFluids, inputItems) >= 1);
             }
 
             @Nonnull
             @Override
             protected ParallelHelper createParallelHelper(@Nonnull GTRecipe recipe) {
-                return super.createParallelHelper(GTN_LargeBioLab.this.applyGlassDiscount(recipe));
+                return super.createParallelHelper(applyGlassDiscount(recipe));
             }
         }.setMaxParallelSupplier(this::getMaxParallelRecipes)
             .noRecipeCaching();
@@ -162,12 +149,12 @@ public class GTN_LargeBioLab extends GTN_MultiBlockBase<GTN_LargeBioLab> {
 
     private GTRecipe applyGlassDiscount(GTRecipe baseRecipe) {
         GTRecipe recipe = baseRecipe.copy();
-        int tierDifference = Math.max(glassTier - recipe.mSpecialValue, 0);
+        int tierDifference = Math.max(glass.getCasingTier() - recipe.mSpecialValue, 0);
         int discountPercent = Math.min(tierDifference * 10, 80);
         int remainingPercent = 100 - discountPercent;
 
         for (int i = 0; i < recipe.mFluidInputs.length; i++) {
-            if (recipe.mFluidInputs[i] != null && recipe.mFluidInputs[i].amount > 0) {
+            if (recipe.mFluidInputs[i].amount > 0) {
                 recipe.mFluidInputs[i].amount = applyPercent(recipe.mFluidInputs[i].amount, remainingPercent);
             }
         }

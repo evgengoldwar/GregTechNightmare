@@ -36,7 +36,6 @@ public class GTN_CreosoteEngine extends GTN_MultiBlockBase<GTN_CreosoteEngine> {
     private static long DYNAMO_AMP;
     private static final int CREOSOTE_USAGE_PER_SEC = 25;
     private final static FluidStack CREOSOTE;
-    private final CasingData glass = createCasingData("glass");
 
     static {
         CREOSOTE = Materials.Creosote.getFluid(CREOSOTE_USAGE_PER_SEC);
@@ -90,7 +89,7 @@ public class GTN_CreosoteEngine extends GTN_MultiBlockBase<GTN_CreosoteEngine> {
             builder -> builder.addMainCasing('B', b -> b.hatches(InputHatch, Dynamo, Maintenance))
                 .addFrame('D', Materials.Iron)
                 .addFrame('E', Materials.Steel)
-                .addAllGlasses('F', glass)
+                .addAllGlasses('F')
                 .addCasing('C', GTN_Casings.SteelGearBoxCasing)
                 .addCasing('A', GTN_Casings.ULVMachineCasing));
     }

@@ -57,7 +57,6 @@ public class GTN_VacuumNuke extends GTN_MultiBlockBase<GTN_VacuumNuke> {
     private final CasingData globalCasing = createCasingData("casing", true);
     private final CasingData itemPipe = createCasingData("itemPipe");
     private final CasingData coilBlock = createCasingData("coil");
-    private final CasingData glass = createCasingData("glass");
     private double heat = 0;
     private long generating = 0;
     private double heatIncrease = 0;
@@ -145,7 +144,7 @@ public class GTN_VacuumNuke extends GTN_MultiBlockBase<GTN_VacuumNuke> {
                 .addCasing('B', GTN_Casings.SolidSteelMachineCasing)
                 .addAllCoil('D', coilBlock)
                 .addFrame('E', Materials.Steel)
-                .addAllGlasses('F', glass)
+                .addAllGlasses('F')
                 .addTierCasing(
                     'C',
                     globalCasing,
