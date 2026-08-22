@@ -11,10 +11,11 @@ import java.util.stream.Stream;
 
 import javax.annotation.Nonnull;
 
-import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.MultiBlockClasses.*;
+import org.jetbrains.annotations.NotNull;
 
 import com.EvgenWarGold.GregTechNightmare.GregTech.Api.MultiblockArea;
 import com.EvgenWarGold.GregTechNightmare.GregTech.Api.MultiblockOffsets;
+import com.EvgenWarGold.GregTechNightmare.GregTech.MultiBlock.MultiBlockClasses.*;
 import com.EvgenWarGold.GregTechNightmare.GregTech.Recipe.GTN_Recipe;
 import com.EvgenWarGold.GregTechNightmare.Utils.Authors;
 import com.EvgenWarGold.GregTechNightmare.Utils.GTN_Utils;
@@ -33,7 +34,6 @@ import gregtech.api.util.GTRecipe;
 import gregtech.api.util.ParallelHelper;
 import gregtech.nei.RecipeDisplayInfo;
 import it.unimi.dsi.fastutil.Pair;
-import org.jetbrains.annotations.NotNull;
 
 public class GTN_LargeBioLab extends GTN_MultiBlockBase<GTN_LargeBioLab> {
 
@@ -98,8 +98,7 @@ public class GTN_LargeBioLab extends GTN_MultiBlockBase<GTN_LargeBioLab> {
     @Override
     public IStructureDefinition<GTN_LargeBioLab> getStructureDefinition() {
         return buildStructureDefinition(
-            builder -> builder
-                .addAllGlasses('G', glass)
+            builder -> builder.addAllGlasses('G', glass)
                 .addCasing('C', GTN_Casings.CleanStainlessSteelMachineCasing)
                 .addCasing('F', GTN_Casings.FilterMachineCasing)
                 .addCasing('U', GTN_Casings.UVMachineCasing)
@@ -134,8 +133,8 @@ public class GTN_LargeBioLab extends GTN_MultiBlockBase<GTN_LargeBioLab> {
                 return map.getAllRecipes()
                     .stream()
                     .filter(
-                        recipe -> applyGlassDiscount(recipe)
-                            .maxParallelCalculatedByInputs(1, inputFluids, inputItems) >= 1);
+                        recipe -> applyGlassDiscount(recipe).maxParallelCalculatedByInputs(1, inputFluids, inputItems)
+                            >= 1);
             }
 
             @Nonnull
