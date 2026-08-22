@@ -1103,14 +1103,6 @@ public abstract class GTN_MultiBlockBase<T extends GTN_MultiBlockBase<T>> extend
     // endregion
 
     // region CasingData
-    public void setMainCasingCount(int mainCasingCount) {
-        this.mainCasingCount = mainCasingCount;
-    }
-
-    public int getMainCasingCount() {
-        return mainCasingCount;
-    }
-
     protected CasingData createCasingData(String channelName, boolean isMainCasing) {
         CasingData data = new CasingData();
         data.setChannelName(channelName);
@@ -1126,10 +1118,6 @@ public abstract class GTN_MultiBlockBase<T extends GTN_MultiBlockBase<T>> extend
     public void setMainCasing(GTN_Casings mainCasing) {
         this.mainCasing = mainCasing;
     }
-
-    public GTN_Casings getMainCasing() {
-        return mainCasing;
-    }
     // endregion
 
     // region Other methods
@@ -1140,10 +1128,6 @@ public abstract class GTN_MultiBlockBase<T extends GTN_MultiBlockBase<T>> extend
 
     public void setMultiBlockTier(int globalMultiBlockTier) {
         this.multiBlockTier = globalMultiBlockTier;
-    }
-
-    public int getMultiBlockTier() {
-        return multiBlockTier;
     }
     // endregion
 }
