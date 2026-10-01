@@ -7,8 +7,9 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+import com.EvgenWarGold.GregTechNightmare.GTN_Logger;
+
 import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
-import gregtech.api.util.GTLog;
 import gregtech.api.util.GTUtility;
 
 public enum GTN_ItemList {
@@ -137,8 +138,7 @@ public enum GTN_ItemList {
     public ItemStack get(int amount) {
         check();
         if (GTUtility.isStackInvalid(itemStack)) {
-            GTLog.out.println("Object in the GTNItemList is null at:");
-            new NullPointerException().printStackTrace(GTLog.out);
+            GTN_Logger.debug(new NullPointerException(), "Object in the GTNItemList is null at:");
             return ERROR_ITEM_STACK;
         }
         return GTUtility.copyAmountUnsafe(amount, itemStack);

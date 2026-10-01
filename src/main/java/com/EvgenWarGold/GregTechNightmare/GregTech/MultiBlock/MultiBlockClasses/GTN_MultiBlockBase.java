@@ -62,6 +62,7 @@ import gregtech.api.util.MultiblockTooltipBuilder;
 import gtPlusPlus.xmod.gregtech.api.metatileentity.implementations.MTEHatchSteamBusInput;
 import gtPlusPlus.xmod.gregtech.api.metatileentity.implementations.MTEHatchSteamBusOutput;
 import gtPlusPlus.xmod.gregtech.api.metatileentity.implementations.base.MTEHatchCustomFluidBase;
+import io.netty.buffer.ByteBuf;
 import it.unimi.dsi.fastutil.Pair;
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
@@ -807,18 +808,17 @@ public abstract class GTN_MultiBlockBase<T extends GTN_MultiBlockBase<T>> extend
 
     // region Sync Data
     @Override
-    public NBTTagCompound getDescriptionData() {
-        NBTTagCompound tag = new NBTTagCompound();
-        tag.setInteger("multiBlockTier", multiBlockTier);
-        tag.setInteger("mainCasingTextureId", mainCasingTextureId);
-        return tag;
+    public void writeToStream(ByteBuf buffer) {
+        super.writeToStream(buffer);
+        buffer.writeInt(multiBlockTier);
+        buffer.writeInt(mainCasingTextureId);
     }
 
     @Override
-    public void onDescriptionPacket(NBTTagCompound data) {
-        super.onDescriptionPacket(data);
-        multiBlockTier = data.getInteger("multiBlockTier");
-        mainCasingTextureId = data.getInteger("mainCasingTextureId");
+    public void readFromStream(ByteBuf buffer) {
+        super.readFromStream(buffer);
+        multiBlockTier = buffer.readInt();
+        mainCasingTextureId = buffer.readInt();
     }
     // endregion
 
