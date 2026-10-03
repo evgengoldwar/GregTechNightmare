@@ -26,7 +26,7 @@ dependencies {
     }
     implementation("com.github.GTNewHorizons:Hodgepodge:2.7.212:dev")
     //AE
-    implementation('com.github.GTNewHorizons:Applied-Energistics-2-Unofficial:rv3-beta-999-GTNH:dev')
+    implementation('com.github.GTNewHorizons:Applied-Energistics-2-Unofficial:rv3-beta-1078-GTNH:dev')
     //BloodMagic
     implementation('com.github.GTNewHorizons:BloodMagic:1.9.14:dev')
     //Botania

@@ -405,7 +405,7 @@ public class GTN_ParallelHelper extends ParallelHelper {
             result = CheckRecipeResultRegistry.insufficientPower(tRecipeEUt);
             return;
         }
-        if (!calculator.getAllowedTierSkip()) {
+        if (recipe.mEUt > calculator.getMaxAllowedRecipeEUt()) {
             result = CheckRecipeResultRegistry.insufficientVoltage(tRecipeEUt);
             return;
         }
