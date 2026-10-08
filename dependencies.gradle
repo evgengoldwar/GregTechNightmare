@@ -1,6 +1,6 @@
 dependencies {
     //Thaumcraft
-    implementation('thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev') { transitive = false }
+    implementation('thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev') {transitive = false}
     implementation('com.github.GTNewHorizons:ThaumicBases:1.9.19:dev')
     implementation('com.github.GTNewHorizons:ThaumicHorizons:1.8.22:dev') { transitive = false }
     implementation('com.github.GTNewHorizons:ThaumicTinkerer:2.12.29:dev') { transitive = false }
@@ -12,14 +12,14 @@ dependencies {
     implementation("com.github.GTNewHorizons:NotEnoughEnergistics:1.7.38:dev")
     implementation("com.github.GTNewHorizons:nei-custom-diagram:1.8.34:dev")
     //GT
-    api('com.github.GTNewHorizons:GT5-Unofficial:5.09.54.70:dev') {
+    api('com.github.GTNewHorizons:GT5-Unofficial:5.09.54.188:dev') {
         exclude group: 'com.github.GTNewHorizons', module: 'Applied-Energistics-2-Unofficial'
         exclude group: 'com.github.GTNewHorizons', module: 'AE2FluidCraft-Rework'
     }
     //CoreMod
     api('com.github.GTNewHorizons:CodeChickenCore:1.4.17:dev')
     implementation('com.github.GTNewHorizons:GTNHLib:0.11.34:dev')
-    implementation('com.github.GTNewHorizons:NewHorizonsCoreMod:2.9.28:dev')
+    implementation('com.github.GTNewHorizons:NewHorizonsCoreMod:2.9.79:dev')
     //AE
     implementation('com.github.GTNewHorizons:AE2FluidCraft-Rework:1.5.99-gtnh:dev') {
         exclude group: 'com.github.GTNewHorizons', module: 'Applied-Energistics-2-Unofficial'
@@ -54,13 +54,21 @@ dependencies {
     runtimeOnlyNonPublishable rfg.deobf("curse.maven:extra-utilities-225561:2264384")
     runtimeOnlyNonPublishable('com.github.GTNewHorizons:VisualProspecting:1.5.38:dev')
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:Nutrition:1.0.1:dev")
-    runtimeOnlyNonPublishable('com.github.GTNewHorizons:Angelica:2.1.59:dev') { transitive = false }
+    def requestedTasks = gradle.startParameter.taskNames
+
+    if (requestedTasks.any { it.startsWith("runClient") }) {
+        runtimeOnlyNonPublishable('com.github.GTNewHorizons:Angelica:2.1.59:dev') {
+            transitive = false
+        }
+    }
     runtimeOnlyNonPublishable(rfg.deobf("com.github.GTNewHorizons:CoreTweaks:0.3.4.7-GTNH"))
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:BetterLoadingScreen:1.7.9-GTNH:dev") { transitive = false }
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:AppleCore:3.3.11:dev") { transitive = false }
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:DuraDisplay:1.4.4:dev")
     implementation("com.github.slprime:ChromaticTooltips:1.0.19:dev")
     runtimeOnlyNonPublishable("com.github.slprime:ChromaticTooltipsCompat:1.0.25:dev")
+    compileOnly('com.github.GTNewHorizons:EnderStorage:1.8.7:dev') {transitive = false}
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:EnderStorage:1.8.7:dev') {transitive = false}
     //Others
     implementation('com.google.auto.value:auto-value-annotations:1.10.4')
     annotationProcessor('com.google.auto.value:auto-value:1.10.4')

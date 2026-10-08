@@ -25,6 +25,7 @@ import gregtech.api.interfaces.tileentity.IGregTechTileEntity;
 import gregtech.api.metatileentity.BaseMetaTileEntity;
 import gregtech.api.metatileentity.implementations.MTEHatch;
 import gregtech.api.render.TextureFactory;
+import io.netty.buffer.ByteBuf;
 import vazkii.botania.api.mana.IManaPool;
 import vazkii.botania.api.mana.ManaNetworkEvent;
 import vazkii.botania.api.wand.IWandHUD;
@@ -78,19 +79,19 @@ public class GTN_ManaHatch extends MTEHatch implements IManaPool, IWandHUD {
     }
 
     @Override
-    public NBTTagCompound getDescriptionData() {
-        NBTTagCompound data = new NBTTagCompound();
-        data.setInteger(TAG_MANA, mana);
-        data.setInteger(TAG_TEXTURE_INDEX, getTextureIndex());
-        data.setInteger(TAG_TEXTURE_PAGE, getTexturePage());
-        return data;
+    public void writeToStream(ByteBuf buffer) {
+        super.writeToStream(buffer);
+        buffer.writeInt(mana);
+        buffer.writeInt(getTextureIndex());
+        buffer.writeInt(getTexturePage());
     }
 
     @Override
-    public void onDescriptionPacket(NBTTagCompound data) {
-        mana = data.getInteger(TAG_MANA);
-        textureIndex = data.getInteger(TAG_TEXTURE_INDEX);
-        texturePage = data.getInteger(TAG_TEXTURE_PAGE);
+    public void readFromStream(ByteBuf buffer) {
+        super.readFromStream(buffer);
+        mana = buffer.readInt();
+        textureIndex = buffer.readInt();
+        texturePage = buffer.readInt();
     }
 
     @Override

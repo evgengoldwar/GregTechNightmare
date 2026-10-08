@@ -26,6 +26,7 @@ import com.EvgenWarGold.GregTechNightmare.ModBlocks.ThaumcraftBlocks;
 import com.EvgenWarGold.GregTechNightmare.Utils.Constants;
 import com.EvgenWarGold.GregTechNightmare.Utils.GTN_Utils;
 
+import cpw.mods.fml.common.network.ByteBufUtils;
 import gregtech.api.enums.Textures;
 import gregtech.api.interfaces.IIconContainer;
 import gregtech.api.interfaces.ITexture;
@@ -33,6 +34,7 @@ import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
 import gregtech.api.interfaces.tileentity.IGregTechTileEntity;
 import gregtech.api.metatileentity.implementations.MTEHatch;
 import gregtech.api.render.TextureFactory;
+import io.netty.buffer.ByteBuf;
 import mcp.mobius.waila.addons.thaumcraft.ThaumcraftModule;
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
@@ -96,43 +98,51 @@ public class GTN_AspectHatch extends MTEHatch implements IAspectContainer, IEsse
     }
 
     @Override
-    public NBTTagCompound getDescriptionData() {
-        NBTTagCompound data = new NBTTagCompound();
-        data.setInteger(TAG_TEXTURE_INDEX, getTextureIndex());
-        data.setInteger(TAG_TEXTURE_PAGE, getTexturePage());
-        data.setByte(TAG_FACING, (byte) facing);
+    public void writeToStream(ByteBuf buffer) {
+        super.writeToStream(buffer);
+        buffer.writeInt(getTextureIndex());
+        buffer.writeInt(getTexturePage());
+        buffer.writeByte(facing);
+        buffer.writeBoolean(aspectFilter != null);
         if (aspectFilter != null) {
-            data.setString(TAG_ASPECT_FILTER, aspectFilter.getTag());
+            ByteBufUtils.writeUTF8String(buffer, aspectFilter.getTag());
         }
 
-        NBTTagList nbtTagList = new NBTTagList();
         Aspect[] aspectArray = this.mAspects.getAspects();
+        int count = 0;
         for (Aspect aspect : aspectArray) {
             if (aspect != null && this.mAspects.getAmount(aspect) > 0) {
-                NBTTagCompound f = new NBTTagCompound();
-                f.setString("key", aspect.getTag());
-                f.setInteger("amount", this.mAspects.getAmount(aspect));
-                nbtTagList.appendTag(f);
+                count++;
             }
         }
-        data.setTag(TAG_ASPECTS, nbtTagList);
-
-        return data;
+        buffer.writeInt(count);
+        for (Aspect aspect : aspectArray) {
+            if (aspect != null && this.mAspects.getAmount(aspect) > 0) {
+                ByteBufUtils.writeUTF8String(buffer, aspect.getTag());
+                buffer.writeInt(this.mAspects.getAmount(aspect));
+            }
+        }
     }
 
     @Override
-    public void onDescriptionPacket(NBTTagCompound data) {
-        textureIndex = data.getInteger(TAG_TEXTURE_INDEX);
-        texturePage = data.getInteger(TAG_TEXTURE_PAGE);
-        facing = data.getByte(TAG_FACING);
-        aspectFilter = Aspect.getAspect(data.getString(TAG_ASPECT_FILTER));
+    public void readFromStream(ByteBuf buffer) {
+        super.readFromStream(buffer);
+        textureIndex = buffer.readInt();
+        texturePage = buffer.readInt();
+        facing = buffer.readByte();
+        if (buffer.readBoolean()) {
+            aspectFilter = Aspect.getAspect(ByteBufUtils.readUTF8String(buffer));
+        } else {
+            aspectFilter = null;
+        }
 
         this.mAspects.aspects.clear();
-        NBTTagList tlist = data.getTagList(TAG_ASPECTS, 10);
-        for (int j = 0; j < tlist.tagCount(); ++j) {
-            NBTTagCompound rs = tlist.getCompoundTagAt(j);
-            if (rs.hasKey("key")) {
-                mAspects.add(Aspect.getAspect(rs.getString("key")), rs.getInteger("amount"));
+        int count = buffer.readInt();
+        for (int i = 0; i < count; i++) {
+            Aspect aspect = Aspect.getAspect(ByteBufUtils.readUTF8String(buffer));
+            int amount = buffer.readInt();
+            if (aspect != null) {
+                mAspects.add(aspect, amount);
             }
         }
     }

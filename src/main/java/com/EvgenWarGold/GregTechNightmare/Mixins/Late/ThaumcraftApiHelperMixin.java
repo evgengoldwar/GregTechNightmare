@@ -23,21 +23,19 @@ public class ThaumcraftApiHelperMixin {
     @Overwrite
     public static TileEntity getConnectableTile(World world, int x, int y, int z, ForgeDirection face) {
         TileEntity te = world.getTileEntity(x + face.offsetX, y + face.offsetY, z + face.offsetZ);
-        switch (te) {
-            case null -> {
-                return null;
-            }
-            case IEssentiaTransport iEssentiaTransport -> {
-                return iEssentiaTransport.isConnectable(face.getOpposite()) ? te : null;
-            }
+        if (te == null) {
+            return null;
+        }
 
-            case IGregTechTileEntity gte -> {
-                IMetaTileEntity mte = gte.getMetaTileEntity();
-                if (mte instanceof IEssentiaTransport) {
-                    return ((IEssentiaTransport) mte).isConnectable(face.getOpposite()) ? te : null;
-                }
-            }
-            default -> {
+        if (te instanceof IEssentiaTransport) {
+            IEssentiaTransport essentiaTransport = (IEssentiaTransport) te;
+            return essentiaTransport.isConnectable(face.getOpposite()) ? te : null;
+        }
+
+        if (te instanceof IGregTechTileEntity) {
+            IMetaTileEntity mte = ((IGregTechTileEntity) te).getMetaTileEntity();
+            if (mte instanceof IEssentiaTransport) {
+                return ((IEssentiaTransport) mte).isConnectable(face.getOpposite()) ? te : null;
             }
         }
 
@@ -51,22 +49,19 @@ public class ThaumcraftApiHelperMixin {
     @Overwrite
     public static TileEntity getConnectableTile(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
         TileEntity te = world.getTileEntity(x + face.offsetX, y + face.offsetY, z + face.offsetZ);
-        switch (te) {
-            case null -> {
-                return null;
-            }
+        if (te == null) {
+            return null;
+        }
 
-            case IEssentiaTransport iEssentiaTransport -> {
-                return iEssentiaTransport.isConnectable(face.getOpposite()) ? te : null;
-            }
+        if (te instanceof IEssentiaTransport) {
+            IEssentiaTransport essentiaTransport = (IEssentiaTransport) te;
+            return essentiaTransport.isConnectable(face.getOpposite()) ? te : null;
+        }
 
-            case IGregTechTileEntity gte -> {
-                IMetaTileEntity mte = gte.getMetaTileEntity();
-                if (mte instanceof IEssentiaTransport) {
-                    return ((IEssentiaTransport) mte).isConnectable(face.getOpposite()) ? te : null;
-                }
-            }
-            default -> {
+        if (te instanceof IGregTechTileEntity) {
+            IMetaTileEntity mte = ((IGregTechTileEntity) te).getMetaTileEntity();
+            if (mte instanceof IEssentiaTransport) {
+                return ((IEssentiaTransport) mte).isConnectable(face.getOpposite()) ? te : null;
             }
         }
 

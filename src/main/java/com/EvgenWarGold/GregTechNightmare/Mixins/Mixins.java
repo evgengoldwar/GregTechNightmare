@@ -22,7 +22,6 @@ public enum Mixins implements IMixins {
             "EntityManaBurstMixin",
             "TileSpreaderMixin",
             "HUDHandlerBotaniaMixin",
-            "TileTubeMixin",
             "ThaumcraftApiHelperMixin",
             "TileJarFillableMixin",
             "BlockTubeRendererMixin")

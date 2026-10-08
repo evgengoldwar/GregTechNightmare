@@ -41,6 +41,7 @@ import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
 import gregtech.api.interfaces.tileentity.IGregTechTileEntity;
 import gregtech.api.metatileentity.implementations.MTEHatch;
 import gregtech.api.render.TextureFactory;
+import io.netty.buffer.ByteBuf;
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
 import thaumcraft.api.aspects.Aspect;
@@ -99,21 +100,21 @@ public class GTN_MeAspectHatch extends MTEHatch implements IAspectContainer, IAc
     }
 
     @Override
-    public NBTTagCompound getDescriptionData() {
-        NBTTagCompound data = new NBTTagCompound();
-        data.setBoolean("isOnline", isOnline);
-        data.setBoolean("isPowered", isPowered);
-        data.setInteger(TAG_TEXTURE_INDEX, getTextureIndex());
-        data.setInteger(TAG_TEXTURE_PAGE, getTexturePage());
-        return data;
+    public void writeToStream(ByteBuf buffer) {
+        super.writeToStream(buffer);
+        buffer.writeBoolean(isOnline);
+        buffer.writeBoolean(isPowered);
+        buffer.writeInt(getTextureIndex());
+        buffer.writeInt(getTexturePage());
     }
 
     @Override
-    public void onDescriptionPacket(NBTTagCompound data) {
-        isOnline = data.getBoolean("isOnline");
-        isPowered = data.getBoolean("isPowered");
-        textureIndex = data.getInteger(TAG_TEXTURE_INDEX);
-        texturePage = data.getInteger(TAG_TEXTURE_PAGE);
+    public void readFromStream(ByteBuf buffer) {
+        super.readFromStream(buffer);
+        isOnline = buffer.readBoolean();
+        isPowered = buffer.readBoolean();
+        textureIndex = buffer.readInt();
+        texturePage = buffer.readInt();
     }
 
     @Override

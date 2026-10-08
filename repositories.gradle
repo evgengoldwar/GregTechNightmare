@@ -1,11 +1,19 @@
 // Add any additional repositories for your dependencies here.
 
 repositories {
-    maven {
-        url = "https://slprime.github.io/ChromaticTooltips/"
-    }
-
-    maven {
-        url = "https://slprime.github.io/ChromaticTooltipsCompat/"
+    exclusiveContent {
+        forRepositories(
+            maven {
+                name = "ChromaticTooltips"
+                url = "https://slprime.github.io/ChromaticTooltips/"
+            },
+            maven {
+                name = "ChromaticTooltipsCompat"
+                url = "https://slprime.github.io/ChromaticTooltipsCompat/"
+            }
+        )
+        filter {
+            includeGroup("com.github.slprime")
+        }
     }
 }
