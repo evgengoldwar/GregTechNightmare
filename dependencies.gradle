@@ -46,10 +46,11 @@ dependencies {
     //Profiling
     runtimeOnlyNonPublishable(rfg.deobf("curse.maven:spark-361579:4271867"))
     //Test
+    compileOnly('com.github.GTNewHorizons:ServerUtilities:2.4.5:dev') { transitive = false }
     runtimeOnlyNonPublishable('com.github.GTNewHorizons:ServerUtilities:2.4.5:dev')
     runtimeOnlyNonPublishable('com.github.GTNewHorizons:InventoryBogoSorter:1.3.43-GTNH:dev') { transitive = false }
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:Mobs-Info:0.5.20-GTNH:dev")
-    api('com.github.GTNewHorizons:BlockRenderer6343:1.4.21:dev')
+    api('com.github.GTNewHorizons:BlockRenderer6343:1.4.22:dev')
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:ForestryMC:4.11.32:dev")
     runtimeOnlyNonPublishable rfg.deobf("curse.maven:extra-utilities-225561:2264384")
     runtimeOnlyNonPublishable('com.github.GTNewHorizons:VisualProspecting:1.5.38:dev')

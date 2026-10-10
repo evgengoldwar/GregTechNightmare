@@ -1,7 +1,9 @@
 package com.EvgenWarGold.GregTechNightmare.GregTech.Items;
 
+import static com.EvgenWarGold.GregTechNightmare.GregTech.Items.GTN_Items.HANDY_BAG;
 import static com.EvgenWarGold.GregTechNightmare.GregTech.Items.GTN_Items.LINK_TOOL;
 import static com.EvgenWarGold.GregTechNightmare.GregTech.Items.GTN_Items.MANA_PROSPECTOR;
+import static com.EvgenWarGold.GregTechNightmare.GregTech.Items.GTN_Items.MEMORY_CARD;
 import static com.EvgenWarGold.GregTechNightmare.GregTech.Items.GTN_Items.META_ITEM_01;
 import static com.EvgenWarGold.GregTechNightmare.GregTech.Items.GTN_Items.WILDCARD_PREFIX;
 
@@ -20,7 +22,7 @@ public class GTN_ItemsRegister {
     }
 
     private static void registryItems() {
-        Item[] itemsToReg = { META_ITEM_01, LINK_TOOL, MANA_PROSPECTOR, WILDCARD_PREFIX };
+        Item[] itemsToReg = { META_ITEM_01, LINK_TOOL, MANA_PROSPECTOR, WILDCARD_PREFIX, HANDY_BAG, MEMORY_CARD };
 
         for (Item item : itemsToReg) {
             GameRegistry.registerItem(item, item.unlocalizedName);
@@ -46,6 +48,13 @@ public class GTN_ItemsRegister {
         GTN_ItemList.MeteorMinerSchematic2.set(META_ITEM_01.registerVariant(3));
 
         GTN_ItemList.ManaProspector.set(MANA_PROSPECTOR);
+
+        GTN_ItemList.HandyBag.set(new net.minecraft.item.ItemStack(HANDY_BAG, 1, 0));
+        GTN_ItemList.HandyBagLarge.set(new net.minecraft.item.ItemStack(HANDY_BAG, 1, 1));
+        GTN_ItemList.MemoryCard6b.set(new net.minecraft.item.ItemStack(MEMORY_CARD, 1, 0));
+        GTN_ItemList.MemoryCard8b.set(new net.minecraft.item.ItemStack(MEMORY_CARD, 1, 1));
+        GTN_ItemList.MemoryCard10b.set(new net.minecraft.item.ItemStack(MEMORY_CARD, 1, 2));
+        GTN_ItemList.MemoryCard12b.set(new net.minecraft.item.ItemStack(MEMORY_CARD, 1, 3));
 
         GTN_ItemList.WildcardIngot.set(new net.minecraft.item.ItemStack(WILDCARD_PREFIX, 1, WildcardPrefix.INGOT.getMeta()));
         GTN_ItemList.WildcardPlate.set(new net.minecraft.item.ItemStack(WILDCARD_PREFIX, 1, WildcardPrefix.PLATE.getMeta()));

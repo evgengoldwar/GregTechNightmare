@@ -160,6 +160,10 @@ public class GTN_ItemCrate extends GTN_MultiBlockBase<GTN_ItemCrate> {
         return storageInventory;
     }
 
+    public IInventory getHandyBagInventory() {
+        return mMachine ? storageInventoryView : null;
+    }
+
     public int countOccupiedSlots() {
         int occupied = 0;
         for (int slot = 0; slot < storageInventory.getSlots(); slot++) {

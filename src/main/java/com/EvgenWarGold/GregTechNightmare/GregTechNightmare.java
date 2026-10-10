@@ -22,6 +22,9 @@ public class GregTechNightmare {
     public static final String MOD_ID = "GregTechNightmare";
     public static final String MOD_NAME = "GregTechNightmare";
     public static final String RESOURCE_ROOT_ID = "gregtechnightmare";
+
+    @Mod.Instance(MOD_ID)
+    public static GregTechNightmare instance;
     public static File CONFIG_DIR;
     public static URL RESOURCE_URL;
 

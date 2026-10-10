@@ -12,4 +12,6 @@ public class GTN_Items {
         .setTextureName(GregTechNightmare.RESOURCE_ROOT_ID + ":StructuresLinkTool");
     public static final Item MANA_PROSPECTOR = new ItemManaProspector()
         .setTextureName(GregTechNightmare.RESOURCE_ROOT_ID + ":ManaProspector");
+    public static final Item HANDY_BAG = new ItemHandyBag();
+    public static final Item MEMORY_CARD = new ItemMemoryCard();
 }
