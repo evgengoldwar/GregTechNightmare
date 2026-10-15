@@ -612,7 +612,7 @@ multiblock.LargeBioLab.recipe_info.fluid_discount=10% fluid discount (max 80%)
 multiblock.IndustrialCrucible=Industrial Crucible
 multiblock.IndustrialCrucible.machine_type=Alchemy
 multiblock.IndustrialCrucible.tooltip.00=Processes crucible recipes, respecting the owner research.
-multiblock.IndustrialCrucible.tooltip.01=§dEssentia:§7 written in AE2 patterns of the ME Thaumic Crafting Input Hatch or taken from its ME network
+multiblock.IndustrialCrucible.tooltip.01=§dEssentia:§7 from AE2 patterns in the ME Thaumic Crafting Input Hatch
 multiblock.IndustrialCrucible.tooltip.02=§bParallel:§7 x2 for every energy tier above HV, limited by available essentia
 multiblock.IndustrialCrucible.tooltip.03=§eOverclock:§7 normal, uses the energy left after parallels
 
@@ -620,7 +620,7 @@ multiblock.IndustrialCrucible.tooltip.03=§eOverclock:§7 normal, uses the energ
 multiblock.AutomatedInfusionMatrix=Automated Infusion Matrix
 multiblock.AutomatedInfusionMatrix.machine_type=Infusion
 multiblock.AutomatedInfusionMatrix.tooltip.00=Consumes infusion ingredients and essentia, respecting the owner research.
-multiblock.AutomatedInfusionMatrix.tooltip.01=§dEssentia:§7 written in AE2 patterns of the ME Thaumic Crafting Input Hatch or taken from its ME network
+multiblock.AutomatedInfusionMatrix.tooltip.01=§dEssentia:§7 from AE2 patterns in the ME Thaumic Crafting Input Hatch
 multiblock.AutomatedInfusionMatrix.tooltip.02=§bParallel:§7 x2 for every energy tier above IV, limited by available essentia
 multiblock.AutomatedInfusionMatrix.tooltip.03=§eOverclock:§7 normal, uses the energy left after parallels
 multiblock.AutomatedInfusionMatrix.tooltip.04=§5Once formed, the Runic Matrix Casings turn into the runic matrix
@@ -631,6 +631,7 @@ gt.blockmachines.mana_hatch.name=Mana Hatch
 gt.blockmachines.aspect_hatch.name=Aspect Hatch
 gt.blockmachines.me_aspect_hatch.name=ME Aspect Hatch
 gt.blockmachines.me_wildcard_pattern_buffer.name=ME Wildcard Pattern Buffer
+gt.blockmachines.me_thaumic_crafting_input_hatch.name=ME Thaumic Crafting Input Hatch
 
 # Welcome message
 GTN.Welcome.header=GregTechNightmare by %s

@@ -53,7 +53,6 @@ import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.recipe.RecipeMaps;
 import gregtech.api.util.GTRecipeConstants;
-import gregtech.api.util.GTUtility;
 import gregtech.api.util.recipe.Scanning;
 import gtPlusPlus.core.material.MaterialMisc;
 import gtPlusPlus.core.material.MaterialsAlloy;
@@ -489,17 +488,6 @@ public class GTN_MultiBlockRecipesPool {
             .duration(20 * 120)
             .addTo(RecipeMaps.assemblerRecipes);
 
-        // Runic Matrix Casing
-        GTValues.RA.stdBuilder()
-            .itemInputs(
-                GTN_Casings.MagicCasing.getItemStack(1),
-                getPlate(Materials.Thaumium, 6),
-                GTUtility.getIntegratedCircuit(1)
-            )
-            .itemOutputs(GTN_ItemList.RunicMatrixCasing.get(1))
-            .eut(RECIPE_EV)
-            .duration(20 * 10)
-            .addTo(RecipeMaps.assemblerRecipes);
         //spotless:on
     }
 }

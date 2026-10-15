@@ -612,7 +612,7 @@ multiblock.LargeBioLab.recipe_info.fluid_discount=снижает расход ж
 multiblock.IndustrialCrucible=Промышленный тигель
 multiblock.IndustrialCrucible.machine_type=Алхимия
 multiblock.IndustrialCrucible.tooltip.00=Выполняет рецепты тигля с проверкой исследований владельца.
-multiblock.IndustrialCrucible.tooltip.01=§dЭссенция:§7 из шаблонов AE2 в ME Thaumic Crafting Input Hatch или из его ME-сети
+multiblock.IndustrialCrucible.tooltip.01=§dЭссенция:§7 из шаблонов AE2 в ME-люке тауматургического автокрафта
 multiblock.IndustrialCrucible.tooltip.02=§bПараллели:§7 x2 за каждый тир энергии выше HV, ограничены доступной эссенцией
 multiblock.IndustrialCrucible.tooltip.03=§eРазгон:§7 обычный, на энергию, оставшуюся после параллелей
 
@@ -620,7 +620,7 @@ multiblock.IndustrialCrucible.tooltip.03=§eРазгон:§7 обычный, н�
 multiblock.AutomatedInfusionMatrix=Автоматическая инфузионная матрица
 multiblock.AutomatedInfusionMatrix.machine_type=Инфузия
 multiblock.AutomatedInfusionMatrix.tooltip.00=Потребляет ингредиенты инфузии и эссенцию с проверкой исследований владельца.
-multiblock.AutomatedInfusionMatrix.tooltip.01=§dЭссенция:§7 из шаблонов AE2 в ME Thaumic Crafting Input Hatch или из его ME-сети
+multiblock.AutomatedInfusionMatrix.tooltip.01=§dЭссенция:§7 из шаблонов AE2 в ME-люке тауматургического автокрафта
 multiblock.AutomatedInfusionMatrix.tooltip.02=§bПараллели:§7 x2 за каждый тир энергии выше IV, ограничены доступной эссенцией
 multiblock.AutomatedInfusionMatrix.tooltip.03=§eРазгон:§7 обычный, на энергию, оставшуюся после параллелей
 multiblock.AutomatedInfusionMatrix.tooltip.04=§5После сборки рунические корпуса превращаются в рунную матрицу
@@ -631,6 +631,7 @@ gt.blockmachines.mana_hatch.name=Люк маны
 gt.blockmachines.aspect_hatch.name=Люк аспектов
 gt.blockmachines.me_aspect_hatch.name=ME-люк аспектов
 gt.blockmachines.me_wildcard_pattern_buffer.name=ME-буфер шаблонов с подстановкой
+gt.blockmachines.me_thaumic_crafting_input_hatch.name=ME-люк тауматургического автокрафта
 
 # Welcome message
 GTN.Welcome.header=GregTechNightmare от %s
