@@ -1105,7 +1105,8 @@ public abstract class GTN_MultiBlockBase<T extends GTN_MultiBlockBase<T>> extend
     // region CasingData
     protected CasingData createCasingData(String channelName, boolean isMainCasing) {
         CasingData data = new CasingData();
-        data.setChannelName(channelName);
+        // StructureLib requires channel names to be non-empty and lower case
+        data.setChannelName(channelName.toLowerCase(java.util.Locale.ROOT));
         data.setIsMainCasing(isMainCasing);
         registeredCasingData.add(data);
         return data;

@@ -55,7 +55,7 @@ import gtPlusPlus.xmod.thermalfoundation.fluid.TFFluids;
 public class GTN_VacuumNuke extends GTN_MultiBlockBase<GTN_VacuumNuke> {
 
     private final CasingData globalCasing = createCasingData("casing", true);
-    private final CasingData itemPipe = createCasingData("itemPipe");
+    private final CasingData itemPipe = createCasingData("itempipe");
     private final CasingData coilBlock = createCasingData("coil");
     private double heat = 0;
     private long generating = 0;
