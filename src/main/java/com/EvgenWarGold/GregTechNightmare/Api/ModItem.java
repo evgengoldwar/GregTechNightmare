@@ -8,7 +8,7 @@ import com.EvgenWarGold.GregTechNightmare.Utils.GTN_Utils;
 
 import gregtech.api.enums.Mods;
 import gregtech.api.util.GTModHandler;
-import journeymap.shadow.org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.NotNull;
 
 public class ModItem {
 

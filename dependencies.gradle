@@ -66,8 +66,10 @@ dependencies {
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:BetterLoadingScreen:1.7.19-GTNH:dev") { transitive = false }
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:AppleCore:3.3.13:dev") { transitive = false }
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:DuraDisplay:1.4.7:dev")
-    implementation("com.github.slprime:ChromaticTooltips:1.0.36:dev")
-    runtimeOnlyNonPublishable("com.github.slprime:ChromaticTooltipsCompat:1.0.40:dev")
+    implementation("com.github.slprime:ChromaticTooltips:1.0.36-GTNH:dev")
+    runtimeOnlyNonPublishable("com.github.slprime:ChromaticTooltipsCompat:1.0.40-GTNH:dev") {
+        exclude group: "com.github.GTNewHorizons", module: "ChromaticTooltips"
+    }
     compileOnly('com.github.GTNewHorizons:EnderStorage:1.8.9:dev') {transitive = false}
     runtimeOnlyNonPublishable('com.github.GTNewHorizons:EnderStorage:1.8.9:dev') {transitive = false}
     //Others
