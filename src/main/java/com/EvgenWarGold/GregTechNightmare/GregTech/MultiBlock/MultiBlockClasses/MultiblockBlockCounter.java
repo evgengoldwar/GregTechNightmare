@@ -194,6 +194,7 @@ public class MultiblockBlockCounter {
         ItemStack holo = StructureHacks.HOLO_STACK.copy();
         int tier = 0;
         ItemStack lastStack = null;
+        Collection<String> channels = channel == null ? Collections.emptyList() : Collections.singletonList(channel);
 
         do {
             holo.stackSize = tier + 1;
@@ -216,13 +217,13 @@ public class MultiblockBlockCounter {
                 }
             }
 
-            data.addItemTier(firstStack, lastStack, channel, tier + 1);
+            data.addItemTier(firstStack, lastStack, channels, tier + 1);
             result.add(firstStack);
             lastStack = firstStack.copy();
 
             while (iterator.hasNext()) {
                 ItemStack stack = iterator.next();
-                data.addItemTier(stack, channel, tier + 1);
+                data.addItemTier(stack, channels, tier + 1);
                 result.add(stack);
             }
 
@@ -230,7 +231,7 @@ public class MultiblockBlockCounter {
 
         } while (tier < MAX_TIERS_TO_CHECK);
 
-        data.setMaxTier(tier, channel);
+        data.setMaxTier(tier, channels);
         return result;
     }
 

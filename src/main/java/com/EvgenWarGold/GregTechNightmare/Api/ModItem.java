@@ -3,12 +3,13 @@ package com.EvgenWarGold.GregTechNightmare.Api;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 
+import org.jetbrains.annotations.NotNull;
+
 import com.EvgenWarGold.GregTechNightmare.GregTech.GTN_ItemList;
 import com.EvgenWarGold.GregTechNightmare.Utils.GTN_Utils;
 
 import gregtech.api.enums.Mods;
 import gregtech.api.util.GTModHandler;
-import journeymap.shadow.org.jetbrains.annotations.NotNull;
 
 public class ModItem {
 
