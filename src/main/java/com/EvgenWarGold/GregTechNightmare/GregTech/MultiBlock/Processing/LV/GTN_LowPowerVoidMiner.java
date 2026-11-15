@@ -5,6 +5,7 @@ import static gregtech.api.enums.HatchElement.Maintenance;
 import static gregtech.api.enums.HatchElement.OutputBus;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -34,9 +35,9 @@ import gregtech.api.util.GTUtility;
 
 public class GTN_LowPowerVoidMiner extends GTN_MultiBlockBase<GTN_LowPowerVoidMiner> {
 
-    private static VoidMinerUtils voidMiner = null;
+    private VoidMinerUtils voidMiner = null;
     private static final List<Integer> ALLOW_DIMENSION = Arrays.asList(-1, 7, 0);
-    private static boolean preGenerated = false;
+    private boolean preGenerated = false;
 
     public GTN_LowPowerVoidMiner(int id, String name) {
         super(id, name);
@@ -96,17 +97,18 @@ public class GTN_LowPowerVoidMiner extends GTN_MultiBlockBase<GTN_LowPowerVoidMi
     @Override
     public void GTN_FirstTick(IGregTechTileEntity gte) {
         super.GTN_FirstTick(gte);
+        int dimId = gte.getWorld().provider.dimensionId;
 
         if (gte.isServerSide()) {
             boolean matchFound = ALLOW_DIMENSION.stream()
-                .anyMatch(n -> n.equals(gte.getWorld().provider.dimensionId));
+                .anyMatch(n -> n.equals(dimId));
 
             if (!matchFound) {
                 explodeMultiblock();
             }
 
             if (!preGenerated) {
-                voidMiner = new VoidMinerUtils(ALLOW_DIMENSION);
+                voidMiner = new VoidMinerUtils(Collections.singletonList(dimId));
                 voidMiner.initDropMap(gte);
                 preGenerated = true;
             }
